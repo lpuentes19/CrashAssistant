@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CrashAssistant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="CrashAssistant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,47 +22,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rg8-Ly-ItL">
-                                <rect key="frame" x="16" y="28" width="176" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="documents" translatesAutoresizingMaskIntoConstraints="NO" id="sSo-00-sXl">
+                                <rect key="frame" x="183" y="382" width="176" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="bzg-xV-mzF"/>
+                                    <constraint firstAttribute="width" constant="176" id="fDM-LX-cMo"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sSo-00-sXl">
-                                <rect key="frame" x="16" y="366" width="176" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI7-kj-uwg">
-                                <rect key="frame" x="277" y="492" width="49" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI7-kj-uwg">
+                                <rect key="frame" x="154" y="550" width="67" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="ydS-3n-kgd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
-                                <state key="normal" title="Profile"/>
+                                <state key="normal" title="Profile">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Need to view accident reports from the past? Or view your profile?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qJB-s8-upy">
-                                <rect key="frame" x="16" y="524" width="176" height="107"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9a-2x-RSQ">
+                                <rect key="frame" x="114" y="292" width="147" height="33"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                <state key="normal" title="Let's Get Started">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Need to view accident reports from the past? Or view your profile?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qJB-s8-upy">
+                                <rect key="frame" x="16" y="417" width="150" height="107"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Oh no! Were you involved" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hsb-4E-urs">
-                                <rect key="frame" x="16" y="185" width="176" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Oh no! Were you involved in an accident? Let us help walk you through the appropriate steps." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hsb-4E-urs">
+                                <rect key="frame" x="16" y="132" width="176" height="132"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9a-2x-RSQ">
-                                <rect key="frame" x="224" y="153" width="129" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
-                                <state key="normal" title="Let's Get Started"/>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crash Assistant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rp-ko-C13">
+                                <rect key="frame" x="80" y="48" width="214" height="37"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carcrash" translatesAutoresizingMaskIntoConstraints="NO" id="rg8-Ly-ItL">
+                                <rect key="frame" x="200" y="132" width="149" height="132"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="45L-qL-djx"/>
+                                    <constraint firstAttribute="width" constant="149" id="ACK-jJ-Pvw"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.89441239458319521" green="0.93226371467597902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Rp-ko-C13" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="0MY-d3-Rb6"/>
+                            <constraint firstItem="oI7-kj-uwg" firstAttribute="top" secondItem="sSo-00-sXl" secondAttribute="bottom" constant="40" id="3Xd-cM-RQK"/>
+                            <constraint firstItem="R9a-2x-RSQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="114" id="3zT-V0-dlX"/>
+                            <constraint firstItem="rg8-Ly-ItL" firstAttribute="leading" secondItem="Hsb-4E-urs" secondAttribute="trailing" constant="8" id="5Yc-vl-9vw"/>
+                            <constraint firstItem="oI7-kj-uwg" firstAttribute="centerX" secondItem="R9a-2x-RSQ" secondAttribute="centerX" id="GmG-L1-Uly"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rg8-Ly-ItL" secondAttribute="trailing" constant="10" id="LEw-hh-Pf6"/>
+                            <constraint firstItem="sSo-00-sXl" firstAttribute="leading" secondItem="qJB-s8-upy" secondAttribute="trailing" constant="17" id="MiT-h3-Dj9"/>
+                            <constraint firstItem="Hsb-4E-urs" firstAttribute="top" secondItem="0Rp-ko-C13" secondAttribute="bottom" constant="47" id="NDM-rl-sFK"/>
+                            <constraint firstItem="R9a-2x-RSQ" firstAttribute="top" secondItem="Hsb-4E-urs" secondAttribute="bottom" constant="28" id="RpV-Gz-lDM"/>
+                            <constraint firstItem="Hsb-4E-urs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="S97-Ok-eo3"/>
+                            <constraint firstItem="oI7-kj-uwg" firstAttribute="top" secondItem="qJB-s8-upy" secondAttribute="bottom" constant="26" id="Saa-P7-auQ"/>
+                            <constraint firstItem="sSo-00-sXl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TXB-qH-gfA"/>
+                            <constraint firstItem="sSo-00-sXl" firstAttribute="leading" secondItem="qJB-s8-upy" secondAttribute="trailing" constant="17" id="Xgu-hT-yMm"/>
+                            <constraint firstItem="0Rp-ko-C13" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="80" id="ZE9-jP-t10"/>
+                            <constraint firstItem="qJB-s8-upy" firstAttribute="leading" secondItem="Hsb-4E-urs" secondAttribute="leading" id="duK-XL-bi2"/>
+                            <constraint firstItem="rg8-Ly-ItL" firstAttribute="bottom" secondItem="Hsb-4E-urs" secondAttribute="bottom" id="h8X-uT-ypY"/>
+                            <constraint firstAttribute="trailing" secondItem="R9a-2x-RSQ" secondAttribute="trailing" constant="114" id="hXM-fW-09q"/>
+                            <constraint firstItem="rg8-Ly-ItL" firstAttribute="top" secondItem="Hsb-4E-urs" secondAttribute="top" id="rxC-hE-pZn"/>
+                            <constraint firstAttribute="trailing" secondItem="0Rp-ko-C13" secondAttribute="trailing" constant="81" id="tsi-3s-I5X"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oI7-kj-uwg" secondAttribute="bottom" constant="84" id="uFO-QF-RbA"/>
+                            <constraint firstItem="qJB-s8-upy" firstAttribute="top" secondItem="R9a-2x-RSQ" secondAttribute="bottom" constant="92" id="y70-ja-47s"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="accidentTextView" destination="Hsb-4E-urs" id="fye-Qi-ZGa"/>
+                        <outlet property="carCrashImage" destination="rg8-Ly-ItL" id="Moh-Ew-WxE"/>
+                        <outlet property="folderImage" destination="sSo-00-sXl" id="Euy-1A-vXG"/>
+                        <outlet property="getStartedButton" destination="R9a-2x-RSQ" id="qUS-Jn-1Ff"/>
+                        <outlet property="profileButton" destination="oI7-kj-uwg" id="ctb-IL-BLT"/>
+                        <outlet property="profileTextView" destination="qJB-s8-upy" id="sxP-eu-2l0"/>
+                        <outlet property="titleLabel" destination="0Rp-ko-C13" id="KNP-uP-j7w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="carcrash" width="251" height="160"/>
+        <image name="documents" width="297" height="294"/>
+    </resources>
 </document>

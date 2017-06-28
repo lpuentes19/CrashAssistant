@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		953D74671F041CC700BEDBBD /* StepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D74661F041CC700BEDBBD /* StepOneViewController.swift */; };
+		953D74691F041D4600BEDBBD /* StepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D74681F041D4600BEDBBD /* StepTwoViewController.swift */; };
+		953D746B1F041D5800BEDBBD /* StepThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D746A1F041D5800BEDBBD /* StepThreeViewController.swift */; };
+		953D746D1F041D6D00BEDBBD /* StepFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D746C1F041D6D00BEDBBD /* StepFourViewController.swift */; };
+		953D746F1F041D8100BEDBBD /* StepFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D746E1F041D8100BEDBBD /* StepFiveViewController.swift */; };
+		953D74711F041DDB00BEDBBD /* StepSixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D74701F041DDB00BEDBBD /* StepSixViewController.swift */; };
+		953D74731F041DE900BEDBBD /* StepSevenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D74721F041DE900BEDBBD /* StepSevenViewController.swift */; };
+		953D74751F041DF400BEDBBD /* StepEightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D74741F041DF400BEDBBD /* StepEightViewController.swift */; };
+		953D74771F041E5D00BEDBBD /* FinishedStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D74761F041E5D00BEDBBD /* FinishedStepsViewController.swift */; };
 		955D032A1F02C086007EE283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955D03291F02C086007EE283 /* AppDelegate.swift */; };
 		955D032F1F02C086007EE283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 955D032D1F02C086007EE283 /* Main.storyboard */; };
 		955D03321F02C086007EE283 /* CrashAssistant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 955D03301F02C086007EE283 /* CrashAssistant.xcdatamodeld */; };
@@ -14,9 +23,26 @@
 		955D03371F02C086007EE283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 955D03351F02C086007EE283 /* LaunchScreen.storyboard */; };
 		955D03401F02C55E007EE283 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955D033F1F02C55E007EE283 /* InitialViewController.swift */; };
 		955D03431F02CBA4007EE283 /* UIView+FadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955D03421F02CBA4007EE283 /* UIView+FadeAnimation.swift */; };
+		95F174961F04434A00CF65AD /* AccidentReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F174951F04434A00CF65AD /* AccidentReportsTableViewController.swift */; };
+		95F174981F0443EB00CF65AD /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F174971F0443EB00CF65AD /* ProfileTableViewController.swift */; };
+		95F1749A1F04466D00CF65AD /* EmergencyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F174991F04466D00CF65AD /* EmergencyListTableViewController.swift */; };
+		95F1749C1F0446F700CF65AD /* AccidentReportDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F1749B1F0446F700CF65AD /* AccidentReportDetailTableViewController.swift */; };
+		95F174A41F0448E700CF65AD /* WitnessesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F174A31F0448E700CF65AD /* WitnessesViewController.swift */; };
+		95F174A61F04494300CF65AD /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F174A51F04494300CF65AD /* PhotosViewController.swift */; };
+		95F174A81F04496100CF65AD /* StatementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F174A71F04496100CF65AD /* StatementViewController.swift */; };
+		95F174AB1F044AB300CF65AD /* AccidentReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F174AA1F044AB300CF65AD /* AccidentReportTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		953D74661F041CC700BEDBBD /* StepOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepOneViewController.swift; sourceTree = "<group>"; };
+		953D74681F041D4600BEDBBD /* StepTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTwoViewController.swift; sourceTree = "<group>"; };
+		953D746A1F041D5800BEDBBD /* StepThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepThreeViewController.swift; sourceTree = "<group>"; };
+		953D746C1F041D6D00BEDBBD /* StepFourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepFourViewController.swift; sourceTree = "<group>"; };
+		953D746E1F041D8100BEDBBD /* StepFiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepFiveViewController.swift; sourceTree = "<group>"; };
+		953D74701F041DDB00BEDBBD /* StepSixViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepSixViewController.swift; sourceTree = "<group>"; };
+		953D74721F041DE900BEDBBD /* StepSevenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepSevenViewController.swift; sourceTree = "<group>"; };
+		953D74741F041DF400BEDBBD /* StepEightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepEightViewController.swift; sourceTree = "<group>"; };
+		953D74761F041E5D00BEDBBD /* FinishedStepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishedStepsViewController.swift; sourceTree = "<group>"; };
 		955D03261F02C086007EE283 /* CrashAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrashAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		955D03291F02C086007EE283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		955D032E1F02C086007EE283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +52,14 @@
 		955D03381F02C086007EE283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		955D033F1F02C55E007EE283 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		955D03421F02CBA4007EE283 /* UIView+FadeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+FadeAnimation.swift"; sourceTree = "<group>"; };
+		95F174951F04434A00CF65AD /* AccidentReportsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccidentReportsTableViewController.swift; sourceTree = "<group>"; };
+		95F174971F0443EB00CF65AD /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		95F174991F04466D00CF65AD /* EmergencyListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyListTableViewController.swift; sourceTree = "<group>"; };
+		95F1749B1F0446F700CF65AD /* AccidentReportDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccidentReportDetailTableViewController.swift; sourceTree = "<group>"; };
+		95F174A31F0448E700CF65AD /* WitnessesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WitnessesViewController.swift; sourceTree = "<group>"; };
+		95F174A51F04494300CF65AD /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		95F174A71F04496100CF65AD /* StatementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatementViewController.swift; sourceTree = "<group>"; };
+		95F174AA1F044AB300CF65AD /* AccidentReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccidentReportTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +73,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		953D74781F041F2300BEDBBD /* StepViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				953D74661F041CC700BEDBBD /* StepOneViewController.swift */,
+				953D74681F041D4600BEDBBD /* StepTwoViewController.swift */,
+				953D746A1F041D5800BEDBBD /* StepThreeViewController.swift */,
+				953D746C1F041D6D00BEDBBD /* StepFourViewController.swift */,
+				953D746E1F041D8100BEDBBD /* StepFiveViewController.swift */,
+				953D74701F041DDB00BEDBBD /* StepSixViewController.swift */,
+				953D74721F041DE900BEDBBD /* StepSevenViewController.swift */,
+				953D74741F041DF400BEDBBD /* StepEightViewController.swift */,
+				953D74761F041E5D00BEDBBD /* FinishedStepsViewController.swift */,
+			);
+			name = StepViewControllers;
+			sourceTree = "<group>";
+		};
 		955D031D1F02C086007EE283 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +110,7 @@
 			children = (
 				955D032D1F02C086007EE283 /* Main.storyboard */,
 				955D03411F02C5A4007EE283 /* ViewControllers */,
+				95F174AC1F044ABB00CF65AD /* Views */,
 				955D03441F02CBA8007EE283 /* Extensions */,
 				955D033E1F02C099007EE283 /* Resources */,
 			);
@@ -82,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				955D033F1F02C55E007EE283 /* InitialViewController.swift */,
+				95F174A91F044A2800CF65AD /* ProfileViewControllers */,
+				953D74781F041F2300BEDBBD /* StepViewControllers */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -92,6 +145,28 @@
 				955D03421F02CBA4007EE283 /* UIView+FadeAnimation.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		95F174A91F044A2800CF65AD /* ProfileViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				95F174951F04434A00CF65AD /* AccidentReportsTableViewController.swift */,
+				95F174971F0443EB00CF65AD /* ProfileTableViewController.swift */,
+				95F174991F04466D00CF65AD /* EmergencyListTableViewController.swift */,
+				95F1749B1F0446F700CF65AD /* AccidentReportDetailTableViewController.swift */,
+				95F174A31F0448E700CF65AD /* WitnessesViewController.swift */,
+				95F174A51F04494300CF65AD /* PhotosViewController.swift */,
+				95F174A71F04496100CF65AD /* StatementViewController.swift */,
+			);
+			name = ProfileViewControllers;
+			sourceTree = "<group>";
+		};
+		95F174AC1F044ABB00CF65AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				95F174AA1F044AB300CF65AD /* AccidentReportTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,10 +242,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95F174961F04434A00CF65AD /* AccidentReportsTableViewController.swift in Sources */,
+				95F174A61F04494300CF65AD /* PhotosViewController.swift in Sources */,
 				955D03401F02C55E007EE283 /* InitialViewController.swift in Sources */,
+				953D74671F041CC700BEDBBD /* StepOneViewController.swift in Sources */,
+				95F1749A1F04466D00CF65AD /* EmergencyListTableViewController.swift in Sources */,
 				955D03431F02CBA4007EE283 /* UIView+FadeAnimation.swift in Sources */,
+				953D74731F041DE900BEDBBD /* StepSevenViewController.swift in Sources */,
+				95F174A41F0448E700CF65AD /* WitnessesViewController.swift in Sources */,
+				95F174A81F04496100CF65AD /* StatementViewController.swift in Sources */,
+				953D74751F041DF400BEDBBD /* StepEightViewController.swift in Sources */,
+				95F174981F0443EB00CF65AD /* ProfileTableViewController.swift in Sources */,
+				95F1749C1F0446F700CF65AD /* AccidentReportDetailTableViewController.swift in Sources */,
 				955D03321F02C086007EE283 /* CrashAssistant.xcdatamodeld in Sources */,
 				955D032A1F02C086007EE283 /* AppDelegate.swift in Sources */,
+				953D74691F041D4600BEDBBD /* StepTwoViewController.swift in Sources */,
+				953D746D1F041D6D00BEDBBD /* StepFourViewController.swift in Sources */,
+				953D746B1F041D5800BEDBBD /* StepThreeViewController.swift in Sources */,
+				953D746F1F041D8100BEDBBD /* StepFiveViewController.swift in Sources */,
+				95F174AB1F044AB300CF65AD /* AccidentReportTableViewCell.swift in Sources */,
+				953D74711F041DDB00BEDBBD /* StepSixViewController.swift in Sources */,
+				953D74771F041E5D00BEDBBD /* FinishedStepsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +428,7 @@
 				955D033D1F02C086007EE283 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

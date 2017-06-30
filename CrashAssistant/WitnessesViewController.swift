@@ -12,8 +12,20 @@ class WitnessesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(WitnessesViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
 
+    func dismissKeyboard() {
+        witnessNameTextField.resignFirstResponder()
+        witnessPhoneTextField.resignFirstResponder()
+        witnessEmailTextField.resignFirstResponder()
+        witness2nameTextField.resignFirstResponder()
+        witness2PhoneTextField.resignFirstResponder()
+        witness2EmailTextField.resignFirstResponder()
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -23,6 +35,7 @@ class WitnessesViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
     @IBOutlet weak var witnessNameTextField: UITextField!
     @IBOutlet weak var witnessPhoneTextField: UITextField!
     @IBOutlet weak var witnessEmailTextField: UITextField!

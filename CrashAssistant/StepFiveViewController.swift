@@ -12,17 +12,19 @@ class StepFiveViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(StepFiveViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func dismissKeyboard() {
+        witnessNameTextField.resignFirstResponder()
+        witnessPhoneTextField.resignFirstResponder()
+        witnessEmailTextField.resignFirstResponder()
+        witness2NameTextField.resignFirstResponder()
+        witness2PhoneTextField.resignFirstResponder()
+        witness2EmailTextField.resignFirstResponder()
     }
-    */
 
     @IBOutlet weak var witnessNameTextField: UITextField!
     @IBOutlet weak var witnessPhoneTextField: UITextField!

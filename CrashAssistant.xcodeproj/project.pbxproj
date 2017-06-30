@@ -23,6 +23,7 @@
 		955D03371F02C086007EE283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 955D03351F02C086007EE283 /* LaunchScreen.storyboard */; };
 		955D03401F02C55E007EE283 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955D033F1F02C55E007EE283 /* InitialViewController.swift */; };
 		955D03431F02CBA4007EE283 /* UIView+FadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955D03421F02CBA4007EE283 /* UIView+FadeAnimation.swift */; };
+		95E872E01F05716900386BFE /* UINavigation+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E872DF1F05716900386BFE /* UINavigation+Pop.swift */; };
 		95F174961F04434A00CF65AD /* AccidentReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F174951F04434A00CF65AD /* AccidentReportsTableViewController.swift */; };
 		95F174981F0443EB00CF65AD /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F174971F0443EB00CF65AD /* ProfileTableViewController.swift */; };
 		95F1749A1F04466D00CF65AD /* EmergencyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F174991F04466D00CF65AD /* EmergencyListTableViewController.swift */; };
@@ -52,6 +53,7 @@
 		955D03381F02C086007EE283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		955D033F1F02C55E007EE283 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		955D03421F02CBA4007EE283 /* UIView+FadeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+FadeAnimation.swift"; sourceTree = "<group>"; };
+		95E872DF1F05716900386BFE /* UINavigation+Pop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigation+Pop.swift"; sourceTree = "<group>"; };
 		95F174951F04434A00CF65AD /* AccidentReportsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccidentReportsTableViewController.swift; sourceTree = "<group>"; };
 		95F174971F0443EB00CF65AD /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		95F174991F04466D00CF65AD /* EmergencyListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyListTableViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				955D03421F02CBA4007EE283 /* UIView+FadeAnimation.swift */,
+				95E872DF1F05716900386BFE /* UINavigation+Pop.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				95F174961F04434A00CF65AD /* AccidentReportsTableViewController.swift in Sources */,
 				95F174A61F04494300CF65AD /* PhotosViewController.swift in Sources */,
 				955D03401F02C55E007EE283 /* InitialViewController.swift in Sources */,
+				95E872E01F05716900386BFE /* UINavigation+Pop.swift in Sources */,
 				953D74671F041CC700BEDBBD /* StepOneViewController.swift in Sources */,
 				95F1749A1F04466D00CF65AD /* EmergencyListTableViewController.swift in Sources */,
 				955D03431F02CBA4007EE283 /* UIView+FadeAnimation.swift in Sources */,

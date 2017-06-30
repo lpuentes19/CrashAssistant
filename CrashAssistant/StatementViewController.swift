@@ -12,8 +12,23 @@ class StatementViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTextView()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(StatementViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
 
+    func setupTextView() {
+        statementTextView.layer.borderWidth = 1
+        statementTextView.layer.borderColor = UIColor.black.cgColor
+        statementTextView.layer.masksToBounds = true
+        statementTextView.layer.cornerRadius = 5
+    }
+    
+    func dismissKeyboard() {
+        statementTextView.resignFirstResponder()
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -12,20 +12,20 @@ class FinishedStepsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupButtons()
+    }
+
+    func setupButtons() {
+        doneButton.layer.borderWidth = 2
+        doneButton.layer.borderColor = UIColor.black.cgColor
+        doneButton.layer.masksToBounds = true
+        doneButton.layer.cornerRadius = 5
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     @IBOutlet weak var doneButton: UIButton!
     @IBAction func doneButtonTapped(_ sender: Any) {
+        guard let initialViewController = self.storyboard?.instantiateViewController(withIdentifier: "homeScreen") as? InitialViewController else { return }
+        
+        self.navigationController?.pushViewController(initialViewController, animated: true)
     }
 }

@@ -12,20 +12,20 @@ class StepEightViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupButtons()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setupButtons() {
+        callInsuranceButton.layer.borderWidth = 2
+        callInsuranceButton.layer.borderColor = UIColor.black.cgColor
+        callInsuranceButton.layer.masksToBounds = true
+        callInsuranceButton.layer.cornerRadius = 5
     }
-    */
-
     @IBOutlet weak var callInsuranceButton: UIButton!
     @IBAction func callInsuranceButtonTapped(_ sender: Any) {
+        
+        guard let url = URL(string: "tel://3854450303") else { return }
+        
+        UIApplication.shared.open(url)
     }
 }

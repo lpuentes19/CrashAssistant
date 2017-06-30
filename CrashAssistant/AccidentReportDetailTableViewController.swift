@@ -12,6 +12,9 @@ class AccidentReportDetailTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AccidentReportDetailTableViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
 
     }
 
@@ -47,6 +50,19 @@ class AccidentReportDetailTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func dismissKeyboard() {
+        nameTextField.resignFirstResponder()
+        addressTextField.resignFirstResponder()
+        phoneTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        insuranceTextField.resignFirstResponder()
+        policyNumberTextField.resignFirstResponder()
+        makeAndModelTextField.resignFirstResponder()
+        colorTextField.resignFirstResponder()
+        officerTextField.resignFirstResponder()
+        badgeNumberTextField.resignFirstResponder()
+    }
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!

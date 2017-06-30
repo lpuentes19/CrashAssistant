@@ -9,7 +9,7 @@
 import UIKit
 
 class StepOneViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButtons()
@@ -24,7 +24,23 @@ class StepOneViewController: UIViewController {
     
     @IBOutlet weak var call911Button: UIButton!
     @IBAction func call911ButtonTapped(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: "Emergency Call", message: "Are you sure you wish to dial 911?", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let callAction = UIAlertAction(title: "Call", style: .default) { (_) in
+            guard let url = URL(string: "tel://3854450303") else { return }
+            
+            UIApplication.shared.open(url)
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(callAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
+    
     @IBAction func cancelButtonTapped(_ sender: Any) {
+        navigationController?.dismiss(animated: true, completion: nil)
     }
 }

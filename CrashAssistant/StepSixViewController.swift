@@ -8,28 +8,44 @@
 
 import UIKit
 
-class StepSixViewController: UIViewController {
+class StepSixViewController: UIViewController, UITextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextField()
+        statementTextView.delegate = self
+        
+        //Tap Gesture to dismiss the keyboard for the user
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(StepSixViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
 
     func setupTextField() {
-        
+        statementTextView.layer.borderWidth = 1
+        statementTextView.layer.borderColor = UIColor.black.cgColor
+        statementTextView.layer.masksToBounds = true
+        statementTextView.layer.cornerRadius = 5
         statementTextView.text = "Enter your statement here..."
         statementTextView.textColor = .lightGray
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if statementTextView.textColor == UIColor.lightGray {
+            statementTextView.text = nil
+            statementTextView.textColor = UIColor.black
+        }
     }
-    */
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if statementTextView.text.isEmpty {
+            statementTextView.text = "Enter your statement here..."
+            statementTextView.textColor = UIColor.lightGray
+        }
+    }
+    
+    func dismissKeyboard() {
+        statementTextView.resignFirstResponder()
+    }
 
     @IBOutlet weak var statementTextView: UITextView!
 }

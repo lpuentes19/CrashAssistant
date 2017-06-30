@@ -12,17 +12,21 @@ class StepThreeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(StepThreeViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func dismissKeyboard() {
+        nameTextField.resignFirstResponder()
+        addressTextField.resignFirstResponder()
+        phoneTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        insuranceTextField.resignFirstResponder()
+        makeModelTextField.resignFirstResponder()
+        colorTextField.resignFirstResponder()
+        licensePlateTextField.resignFirstResponder()
     }
-    */
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!

@@ -46,5 +46,6 @@ class AccidentReportsTableViewController: UITableViewController {
     */
 
     @IBAction func cancelButtonTapped(_ sender: Any) {
+        navigationController?.dismiss(animated: true, completion: nil)
     }
 }

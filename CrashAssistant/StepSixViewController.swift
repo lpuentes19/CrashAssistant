@@ -46,6 +46,17 @@ class StepSixViewController: UIViewController, UITextViewDelegate {
     func dismissKeyboard() {
         statementTextView.resignFirstResponder()
     }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toStep7" {
+            let destinationVC = segue.destination as? AccidentReportsTableViewController
+            
+            let accidentReports = Step3Controller.shared.accidentReports
+            destinationVC?.accidentReports = accidentReports[0]
+        }
+    }
 
     @IBOutlet weak var statementTextView: UITextView!
 }

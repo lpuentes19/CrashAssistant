@@ -24,6 +24,10 @@
 		955D03401F02C55E007EE283 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955D033F1F02C55E007EE283 /* InitialViewController.swift */; };
 		955D03431F02CBA4007EE283 /* UIView+FadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955D03421F02CBA4007EE283 /* UIView+FadeAnimation.swift */; };
 		95E872E01F05716900386BFE /* UINavigation+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E872DF1F05716900386BFE /* UINavigation+Pop.swift */; };
+		95EABDF01F06B94B0040BF33 /* Step3+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EABDEF1F06B94B0040BF33 /* Step3+Convenience.swift */; };
+		95EABDF21F06B9E60040BF33 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EABDF11F06B9E60040BF33 /* CoreDataStack.swift */; };
+		95EABDF41F06BB840040BF33 /* Step3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EABDF31F06BB840040BF33 /* Step3Controller.swift */; };
+		95EABDF71F0707580040BF33 /* Date+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EABDF61F0707580040BF33 /* Date+Conversion.swift */; };
 		95F174961F04434A00CF65AD /* AccidentReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F174951F04434A00CF65AD /* AccidentReportsTableViewController.swift */; };
 		95F174981F0443EB00CF65AD /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F174971F0443EB00CF65AD /* ProfileTableViewController.swift */; };
 		95F1749A1F04466D00CF65AD /* EmergencyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F174991F04466D00CF65AD /* EmergencyListTableViewController.swift */; };
@@ -54,6 +58,10 @@
 		955D033F1F02C55E007EE283 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		955D03421F02CBA4007EE283 /* UIView+FadeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+FadeAnimation.swift"; sourceTree = "<group>"; };
 		95E872DF1F05716900386BFE /* UINavigation+Pop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigation+Pop.swift"; sourceTree = "<group>"; };
+		95EABDEF1F06B94B0040BF33 /* Step3+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Step3+Convenience.swift"; sourceTree = "<group>"; };
+		95EABDF11F06B9E60040BF33 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		95EABDF31F06BB840040BF33 /* Step3Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step3Controller.swift; sourceTree = "<group>"; };
+		95EABDF61F0707580040BF33 /* Date+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Conversion.swift"; sourceTree = "<group>"; };
 		95F174951F04434A00CF65AD /* AccidentReportsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccidentReportsTableViewController.swift; sourceTree = "<group>"; };
 		95F174971F0443EB00CF65AD /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		95F174991F04466D00CF65AD /* EmergencyListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyListTableViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +120,8 @@
 			children = (
 				955D032D1F02C086007EE283 /* Main.storyboard */,
 				955D03411F02C5A4007EE283 /* ViewControllers */,
+				95EABDF51F06BB930040BF33 /* ModelControllers */,
+				95EABDEE1F06ACB30040BF33 /* Models */,
 				95F174AC1F044ABB00CF65AD /* Views */,
 				955D03441F02CBA8007EE283 /* Extensions */,
 				955D033E1F02C099007EE283 /* Resources */,
@@ -126,7 +136,6 @@
 				955D03291F02C086007EE283 /* AppDelegate.swift */,
 				955D03351F02C086007EE283 /* LaunchScreen.storyboard */,
 				955D03381F02C086007EE283 /* Info.plist */,
-				955D03301F02C086007EE283 /* CrashAssistant.xcdatamodeld */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -146,8 +155,27 @@
 			children = (
 				955D03421F02CBA4007EE283 /* UIView+FadeAnimation.swift */,
 				95E872DF1F05716900386BFE /* UINavigation+Pop.swift */,
+				95EABDF61F0707580040BF33 /* Date+Conversion.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		95EABDEE1F06ACB30040BF33 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				955D03301F02C086007EE283 /* CrashAssistant.xcdatamodeld */,
+				95EABDEF1F06B94B0040BF33 /* Step3+Convenience.swift */,
+				95EABDF11F06B9E60040BF33 /* CoreDataStack.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		95EABDF51F06BB930040BF33 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				95EABDF31F06BB840040BF33 /* Step3Controller.swift */,
+			);
+			name = ModelControllers;
 			sourceTree = "<group>";
 		};
 		95F174A91F044A2800CF65AD /* ProfileViewControllers */ = {
@@ -247,6 +275,7 @@
 			files = (
 				95F174961F04434A00CF65AD /* AccidentReportsTableViewController.swift in Sources */,
 				95F174A61F04494300CF65AD /* PhotosViewController.swift in Sources */,
+				95EABDF41F06BB840040BF33 /* Step3Controller.swift in Sources */,
 				955D03401F02C55E007EE283 /* InitialViewController.swift in Sources */,
 				95E872E01F05716900386BFE /* UINavigation+Pop.swift in Sources */,
 				953D74671F041CC700BEDBBD /* StepOneViewController.swift in Sources */,
@@ -260,12 +289,15 @@
 				95F1749C1F0446F700CF65AD /* AccidentReportDetailTableViewController.swift in Sources */,
 				955D03321F02C086007EE283 /* CrashAssistant.xcdatamodeld in Sources */,
 				955D032A1F02C086007EE283 /* AppDelegate.swift in Sources */,
+				95EABDF21F06B9E60040BF33 /* CoreDataStack.swift in Sources */,
+				95EABDF71F0707580040BF33 /* Date+Conversion.swift in Sources */,
 				953D74691F041D4600BEDBBD /* StepTwoViewController.swift in Sources */,
 				953D746D1F041D6D00BEDBBD /* StepFourViewController.swift in Sources */,
 				953D746B1F041D5800BEDBBD /* StepThreeViewController.swift in Sources */,
 				953D746F1F041D8100BEDBBD /* StepFiveViewController.swift in Sources */,
 				95F174AB1F044AB300CF65AD /* AccidentReportTableViewCell.swift in Sources */,
 				953D74711F041DDB00BEDBBD /* StepSixViewController.swift in Sources */,
+				95EABDF01F06B94B0040BF33 /* Step3+Convenience.swift in Sources */,
 				953D74771F041E5D00BEDBBD /* FinishedStepsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

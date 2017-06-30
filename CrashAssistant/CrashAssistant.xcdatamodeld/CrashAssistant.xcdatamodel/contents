@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Step3" representedClassName="Step3" syncable="YES" codeGenerationType="class">
+        <attribute name="address" attributeType="String" syncable="YES"/>
+        <attribute name="badgeNumber" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
+        <attribute name="color" attributeType="String" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="email" attributeType="String" syncable="YES"/>
+        <attribute name="insurance" attributeType="String" syncable="YES"/>
+        <attribute name="licensePlate" attributeType="String" syncable="YES"/>
+        <attribute name="makeAndModel" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="officer" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
+        <attribute name="phone" attributeType="String" syncable="YES"/>
+        <attribute name="statement" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Step3" positionX="-63" positionY="-18" width="128" height="225"/>
+    </elements>
 </model>

@@ -18,14 +18,18 @@ class StepThreeViewController: UIViewController {
     }
     
     func dismissKeyboard() {
-        nameTextField.resignFirstResponder()
-        addressTextField.resignFirstResponder()
-        phoneTextField.resignFirstResponder()
-        emailTextField.resignFirstResponder()
-        insuranceTextField.resignFirstResponder()
-        makeModelTextField.resignFirstResponder()
-        colorTextField.resignFirstResponder()
-        licensePlateTextField.resignFirstResponder()
+        view.endEditing(true)
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toStep4" {
+            let destinationVC = segue.destination as? AccidentReportsTableViewController
+            
+            let accidentReports = Step3Controller.shared.accidentReports
+            destinationVC?.accidentReports = accidentReports[0]
+        }
     }
 
     @IBOutlet weak var nameTextField: UITextField!

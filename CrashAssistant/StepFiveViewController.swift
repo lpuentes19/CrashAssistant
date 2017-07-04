@@ -10,6 +10,7 @@ import UIKit
 
 class StepFiveViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,12 +19,7 @@ class StepFiveViewController: UIViewController {
     }
     
     func dismissKeyboard() {
-        witnessNameTextField.resignFirstResponder()
-        witnessPhoneTextField.resignFirstResponder()
-        witnessEmailTextField.resignFirstResponder()
-        witness2NameTextField.resignFirstResponder()
-        witness2PhoneTextField.resignFirstResponder()
-        witness2EmailTextField.resignFirstResponder()
+        view.endEditing(true)
     }
 
     @IBOutlet weak var witnessNameTextField: UITextField!
@@ -32,4 +28,17 @@ class StepFiveViewController: UIViewController {
     @IBOutlet weak var witness2NameTextField: UITextField!
     @IBOutlet weak var witness2PhoneTextField: UITextField!
     @IBOutlet weak var witness2EmailTextField: UITextField!
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        
+        guard let witnessName = witnessNameTextField.text,
+            let witnessEmail = witnessEmailTextField.text,
+            let witnessPhone = witnessPhoneTextField.text,
+            let witness2Name = witness2NameTextField.text,
+            let witness2Email = witness2EmailTextField.text,
+            let witness2Phone = witness2PhoneTextField.text else { return }
+        
+            Step3Controller.shared.update(witnessName: witnessName, witnessEmail: witnessEmail, witnessPhone: witnessPhone, witness2Name: witness2Name, witness2Email: witness2Email, witness2Phone: witness2Phone)
+        
+        performSegue(withIdentifier: "toStep6", sender: nil)
+    }
 }

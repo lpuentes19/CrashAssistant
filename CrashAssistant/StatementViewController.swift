@@ -10,12 +10,21 @@ import UIKit
 
 class StatementViewController: UIViewController {
 
+    var statement: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextView()
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(StatementViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
+        statementTextView.text = statement
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        statementTextView.setContentOffset(CGPoint.zero, animated: false)
     }
 
     func setupTextView() {
@@ -28,16 +37,8 @@ class StatementViewController: UIViewController {
     func dismissKeyboard() {
         statementTextView.resignFirstResponder()
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @IBOutlet weak var statementTextView: UITextView!
+    @IBAction func saveButtonTapped(_ sender: Any) {
+    }
 }

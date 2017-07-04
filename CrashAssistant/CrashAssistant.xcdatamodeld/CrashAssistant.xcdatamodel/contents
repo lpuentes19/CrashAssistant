@@ -13,8 +13,14 @@
         <attribute name="officer" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
         <attribute name="phone" attributeType="String" syncable="YES"/>
         <attribute name="statement" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
+        <attribute name="witness2Email" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
+        <attribute name="witness2Name" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
+        <attribute name="witness2Phone" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
+        <attribute name="witnessEmail" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
+        <attribute name="witnessName" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
+        <attribute name="witnessPhone" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Step3" positionX="-63" positionY="-18" width="128" height="225"/>
+        <element name="Step3" positionX="-63" positionY="-18" width="128" height="315"/>
     </elements>
 </model>

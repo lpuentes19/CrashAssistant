@@ -39,7 +39,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FTz-B4-ria" kind="show" id="u4M-NP-V5b"/>
+                                    <segue destination="FTz-B4-ria" kind="show" identifier="toAccidentReportsVC" id="u4M-NP-V5b"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9a-2x-RSQ">
@@ -134,7 +134,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="159"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xe2-QL-iwX">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xe2-QL-iwX">
                                             <rect key="frame" x="8" y="8" width="142" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="0kd-7X-gbx"/>
@@ -143,7 +143,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmd-N2-7ZK">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmd-N2-7ZK">
                                             <rect key="frame" x="8" y="37" width="142" height="21"/>
                                             <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -186,7 +186,7 @@
                                     <outlet property="makeAndModelLabel" destination="dmd-N2-7ZK" id="1fo-Lg-6rz"/>
                                     <outlet property="nameLabel" destination="Xe2-QL-iwX" id="JbL-zT-fqE"/>
                                     <outlet property="statementTextView" destination="Vh5-x1-kVd" id="q0T-3N-Fam"/>
-                                    <segue destination="9N4-QR-DXr" kind="show" id="cPS-q6-ffm"/>
+                                    <segue destination="9N4-QR-DXr" kind="show" identifier="toDetailVC" id="cPS-q6-ffm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -212,7 +212,7 @@
             </objects>
             <point key="canvasLocation" x="1924" y="138.98050974512745"/>
         </scene>
-        <!--Title-->
+        <!--Report-->
         <scene sceneID="L40-Xh-ZxG">
             <objects>
                 <tableViewController id="9N4-QR-DXr" customClass="AccidentReportDetailTableViewController" customModule="CrashAssistant" customModuleProvider="target" sceneMemberID="viewController">
@@ -270,7 +270,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9fh-Bg-PsI">
-                                                    <rect key="frame" x="78" y="7" width="289" height="30"/>
+                                                    <rect key="frame" x="84" y="7" width="283" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -279,7 +279,7 @@
                                             <constraints>
                                                 <constraint firstItem="XOm-q7-GXR" firstAttribute="leading" secondItem="Wz3-iR-ev9" secondAttribute="leadingMargin" id="48i-yc-6dK"/>
                                                 <constraint firstItem="XOm-q7-GXR" firstAttribute="centerY" secondItem="Wz3-iR-ev9" secondAttribute="centerY" id="J7Q-Xf-1mE"/>
-                                                <constraint firstItem="9fh-Bg-PsI" firstAttribute="leading" secondItem="XOm-q7-GXR" secondAttribute="trailing" constant="2" id="LOV-gq-yAC"/>
+                                                <constraint firstItem="9fh-Bg-PsI" firstAttribute="leading" secondItem="XOm-q7-GXR" secondAttribute="trailing" constant="8" id="LOV-gq-yAC"/>
                                                 <constraint firstItem="9fh-Bg-PsI" firstAttribute="trailing" secondItem="Wz3-iR-ev9" secondAttribute="trailingMargin" id="Sdh-96-Xo6"/>
                                                 <constraint firstItem="XOm-q7-GXR" firstAttribute="bottom" secondItem="9fh-Bg-PsI" secondAttribute="bottom" id="YUd-Rd-X4d"/>
                                                 <constraint firstItem="XOm-q7-GXR" firstAttribute="top" secondItem="9fh-Bg-PsI" secondAttribute="top" id="mbG-7d-LGV"/>
@@ -366,7 +366,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SlY-uA-vFe">
-                                                    <rect key="frame" x="90" y="7" width="277" height="30"/>
+                                                    <rect key="frame" x="96" y="7" width="271" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -376,44 +376,14 @@
                                                 <constraint firstItem="MJi-aw-Xoj" firstAttribute="centerY" secondItem="SlY-uA-vFe" secondAttribute="centerY" id="0g6-1Y-xqQ"/>
                                                 <constraint firstItem="SlY-uA-vFe" firstAttribute="trailing" secondItem="PsZ-At-m44" secondAttribute="trailingMargin" id="3TZ-II-KeH"/>
                                                 <constraint firstItem="MJi-aw-Xoj" firstAttribute="leading" secondItem="PsZ-At-m44" secondAttribute="leadingMargin" id="FGW-OR-7dE"/>
-                                                <constraint firstItem="SlY-uA-vFe" firstAttribute="leading" secondItem="MJi-aw-Xoj" secondAttribute="trailing" constant="2" id="Hlt-ZP-H0c"/>
+                                                <constraint firstItem="SlY-uA-vFe" firstAttribute="leading" secondItem="MJi-aw-Xoj" secondAttribute="trailing" constant="8" id="Hlt-ZP-H0c"/>
                                                 <constraint firstItem="MJi-aw-Xoj" firstAttribute="top" secondItem="SlY-uA-vFe" secondAttribute="top" id="o3s-Ca-Yei"/>
                                                 <constraint firstItem="MJi-aw-Xoj" firstAttribute="centerY" secondItem="PsZ-At-m44" secondAttribute="centerY" id="zVp-y2-RAi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1Kf-le-M7f">
-                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Kf-le-M7f" id="Apx-dy-IBC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Policy Number:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B13-vy-bJS">
-                                                    <rect key="frame" x="8" y="6" width="116" height="31"/>
-                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DH5-Pq-zf6">
-                                                    <rect key="frame" x="126" y="7" width="241" height="30"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="B13-vy-bJS" firstAttribute="centerY" secondItem="DH5-Pq-zf6" secondAttribute="centerY" id="Q3D-l8-9LM"/>
-                                                <constraint firstItem="B13-vy-bJS" firstAttribute="leading" secondItem="Apx-dy-IBC" secondAttribute="leadingMargin" id="YXr-Yp-kFg"/>
-                                                <constraint firstItem="B13-vy-bJS" firstAttribute="bottom" secondItem="DH5-Pq-zf6" secondAttribute="bottom" id="Yvm-dC-D5w"/>
-                                                <constraint firstItem="B13-vy-bJS" firstAttribute="centerY" secondItem="Apx-dy-IBC" secondAttribute="centerY" id="qfq-Rk-Ljn"/>
-                                                <constraint firstItem="DH5-Pq-zf6" firstAttribute="leading" secondItem="B13-vy-bJS" secondAttribute="trailing" constant="2" id="sAQ-nU-EB8"/>
-                                                <constraint firstItem="DH5-Pq-zf6" firstAttribute="trailing" secondItem="Apx-dy-IBC" secondAttribute="trailingMargin" id="wSD-op-40D"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5VT-Fz-9ly">
-                                        <rect key="frame" x="0.0" y="264" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5VT-Fz-9ly" id="bXE-q9-xSo">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -446,7 +416,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="PyM-7Y-9RZ">
-                                        <rect key="frame" x="0.0" y="308" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="264" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PyM-7Y-9RZ" id="bdd-zT-OTr">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -479,23 +449,23 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9Zu-ay-2xR">
-                                        <rect key="frame" x="0.0" y="352" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="308" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Zu-ay-2xR" id="Z1l-3K-UXl">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Officer:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fke-ub-Y5e">
-                                                    <rect key="frame" x="8" y="8" width="65" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License Plate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fke-ub-Y5e">
+                                                    <rect key="frame" x="8" y="8" width="112" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="65" id="BMm-ND-7og"/>
+                                                        <constraint firstAttribute="width" constant="112" id="BMm-ND-7og"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gl9-1t-aH8">
-                                                    <rect key="frame" x="74" y="8" width="292" height="30"/>
+                                                    <rect key="frame" x="121" y="8" width="245" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -512,23 +482,23 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Bli-2Y-P5N">
-                                        <rect key="frame" x="0.0" y="396" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="352" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bli-2Y-P5N" id="UnM-F4-Rlb">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Badge Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5S-7O-Yzc">
-                                                    <rect key="frame" x="8" y="8" width="125" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Officer:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5S-7O-Yzc">
+                                                    <rect key="frame" x="8" y="8" width="58" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="125" id="4Oi-Qt-9YG"/>
+                                                        <constraint firstAttribute="width" constant="58" id="4Oi-Qt-9YG"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHu-ri-29R">
-                                                    <rect key="frame" x="134" y="8" width="232" height="30"/>
+                                                    <rect key="frame" x="66" y="8" width="300" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -536,7 +506,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="kHu-ri-29R" secondAttribute="trailing" constant="1" id="4D5-6K-GVG"/>
-                                                <constraint firstItem="kHu-ri-29R" firstAttribute="leading" secondItem="a5S-7O-Yzc" secondAttribute="trailing" constant="1" id="Kog-1M-RI2"/>
+                                                <constraint firstItem="kHu-ri-29R" firstAttribute="leading" secondItem="a5S-7O-Yzc" secondAttribute="trailing" id="Kog-1M-RI2"/>
                                                 <constraint firstItem="a5S-7O-Yzc" firstAttribute="leading" secondItem="UnM-F4-Rlb" secondAttribute="leadingMargin" id="eo2-LG-9o1"/>
                                                 <constraint firstItem="a5S-7O-Yzc" firstAttribute="bottom" secondItem="kHu-ri-29R" secondAttribute="bottom" id="jAn-IO-ZWu"/>
                                                 <constraint firstItem="a5S-7O-Yzc" firstAttribute="top" secondItem="UnM-F4-Rlb" secondAttribute="topMargin" id="lW9-Di-O12"/>
@@ -544,15 +514,39 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="witnessCell" id="WQU-gp-0m5">
-                                        <rect key="frame" x="0.0" y="440" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WQU-gp-0m5">
+                                        <rect key="frame" x="0.0" y="396" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WQU-gp-0m5" id="8yi-n8-eTw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Badge Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeD-tf-MXg">
+                                                    <rect key="frame" x="8" y="8" width="122" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="krK-ff-IiL">
+                                                    <rect key="frame" x="130" y="7" width="237" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="witnessesCell" id="VbK-g1-pV3">
+                                        <rect key="frame" x="0.0" y="440" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VbK-g1-pV3" id="1st-Il-BYd">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Witnesses" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeD-tf-MXg">
-                                                    <rect key="frame" x="8" y="8" width="88" height="28"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Witnesses" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiM-NR-kym">
+                                                    <rect key="frame" x="8" y="8" width="87" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -561,17 +555,17 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="1ec-fd-kMY" kind="show" id="QoL-5I-qqB"/>
+                                            <segue destination="1ec-fd-kMY" kind="show" identifier="toWitnessVC" id="TuX-go-nMh"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="statementCell" id="VbK-g1-pV3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="statementCell" id="E82-HO-qo9">
                                         <rect key="frame" x="0.0" y="484" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VbK-g1-pV3" id="1st-Il-BYd">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E82-HO-qo9" id="CsI-61-xVC">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Statement" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiM-NR-kym">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Statement" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQM-OQ-gEy">
                                                     <rect key="frame" x="8" y="8" width="125" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
@@ -581,7 +575,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="KRj-K1-vvA" kind="show" id="rOl-Se-l8b"/>
+                                            <segue destination="KRj-K1-vvA" kind="show" identifier="toStatementVC" id="OyC-ZF-Qj7"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -592,25 +586,30 @@
                             <outlet property="delegate" destination="9N4-QR-DXr" id="raA-bS-lz0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="Az5-2y-UCJ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="rn0-fT-J0G"/>
+                    <navigationItem key="navigationItem" title="Report" id="Az5-2y-UCJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="rn0-fT-J0G">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="9N4-QR-DXr" id="n6M-uH-6Y4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addressTextField" destination="9fh-Bg-PsI" id="ukL-K9-jwT"/>
-                        <outlet property="badgeNumberTextField" destination="kHu-ri-29R" id="Be7-JL-Fav"/>
+                        <outlet property="badgeNumberTextField" destination="krK-ff-IiL" id="tM7-Gy-qM8"/>
                         <outlet property="colorTextField" destination="21x-lf-SNg" id="9JI-l2-LCe"/>
                         <outlet property="emailTextField" destination="c8Q-x4-gKJ" id="z14-LN-gHG"/>
                         <outlet property="insuranceTextField" destination="SlY-uA-vFe" id="V2n-ti-mA3"/>
+                        <outlet property="licensePlateTextField" destination="Gl9-1t-aH8" id="WwM-a9-N9C"/>
                         <outlet property="makeAndModelTextField" destination="PJJ-Zw-rJU" id="9U9-Dq-bCd"/>
                         <outlet property="nameTextField" destination="AnS-Tt-5qr" id="Ca6-6V-QcR"/>
-                        <outlet property="officerTextField" destination="Gl9-1t-aH8" id="9iB-1x-lAC"/>
+                        <outlet property="officerTextField" destination="kHu-ri-29R" id="7bQ-pE-1v4"/>
                         <outlet property="phoneTextField" destination="Zmu-es-psc" id="jYJ-27-Oml"/>
-                        <outlet property="policyNumberTextField" destination="DH5-Pq-zf6" id="eVc-Jt-TFH"/>
+                        <segue destination="Zgm-vf-zGG" kind="show" identifier="backToAccidentReport" id="kFl-Sa-J0W"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39l-5y-MwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3473" y="-399"/>
+            <point key="canvasLocation" x="3117.5999999999999" y="138.98050974512745"/>
         </scene>
         <!--Profile-->
         <scene sceneID="v9u-72-AhI">
@@ -1133,8 +1132,8 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-6V-pdB">
-                                <rect key="frame" x="68" y="386" width="291" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-6V-pdB">
+                                <rect key="frame" x="89" y="386" width="270" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1152,7 +1151,7 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hU1-cW-dfL">
-                                <rect key="frame" x="230.5" y="523" width="128.5" height="30"/>
+                                <rect key="frame" x="237" y="523" width="124" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1164,25 +1163,25 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-jN-lVu">
-                                <rect key="frame" x="66.5" y="590" width="292.5" height="30"/>
+                                <rect key="frame" x="72" y="590" width="287" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYn-cK-K5N">
-                                <rect key="frame" x="139" y="626" width="222" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYn-cK-K5N">
+                                <rect key="frame" x="139" y="626" width="223" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="License Plate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFc-h0-Cvu">
-                                <rect key="frame" x="16" y="626" width="116" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License Plate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFc-h0-Cvu">
+                                <rect key="frame" x="16" y="626" width="108" height="30"/>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nn1-P2-9QY">
-                                <rect key="frame" x="66.5" y="490" width="292.5" height="30"/>
+                                <rect key="frame" x="72" y="490" width="287" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1206,14 +1205,14 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                             <constraint firstItem="y9u-6V-pdB" firstAttribute="trailing" secondItem="jkt-cN-vIV" secondAttribute="trailing" id="94i-83-mzj"/>
                             <constraint firstItem="jkt-cN-vIV" firstAttribute="trailing" secondItem="Fio-fA-bUc" secondAttribute="trailing" constant="-1" id="9Qe-hl-Huf"/>
                             <constraint firstItem="y4m-hX-Hwy" firstAttribute="top" secondItem="xef-o9-CeU" secondAttribute="top" id="Ahs-fr-yqn"/>
-                            <constraint firstItem="nn1-P2-9QY" firstAttribute="leading" secondItem="CqU-1F-DBv" secondAttribute="trailing" constant="3" id="CBk-LJ-PIT"/>
+                            <constraint firstItem="nn1-P2-9QY" firstAttribute="leading" secondItem="CqU-1F-DBv" secondAttribute="trailing" constant="8.5" id="CBk-LJ-PIT"/>
                             <constraint firstItem="Fio-fA-bUc" firstAttribute="leading" secondItem="m9K-VN-Ve5" secondAttribute="trailing" constant="2" id="ClK-6c-BfV"/>
                             <constraint firstItem="Fio-fA-bUc" firstAttribute="trailing" secondItem="nn1-P2-9QY" secondAttribute="trailing" constant="1" id="DKW-px-6Ee"/>
                             <constraint firstItem="PQK-Qf-GnG" firstAttribute="trailing" secondItem="y9u-6V-pdB" secondAttribute="trailing" id="EAP-Yq-Edc"/>
-                            <constraint firstItem="YSe-jN-lVu" firstAttribute="leading" secondItem="3kV-Ne-XpJ" secondAttribute="trailing" constant="4" id="EyG-3a-pU7"/>
+                            <constraint firstItem="YSe-jN-lVu" firstAttribute="leading" secondItem="3kV-Ne-XpJ" secondAttribute="trailing" constant="9.5" id="EyG-3a-pU7"/>
                             <constraint firstItem="3kV-Ne-XpJ" firstAttribute="top" secondItem="y4m-hX-Hwy" secondAttribute="bottom" constant="4" id="HI5-Lb-lDM"/>
                             <constraint firstItem="iIf-S7-wcg" firstAttribute="bottom" secondItem="jkt-cN-vIV" secondAttribute="bottom" id="Hdv-sY-r4r"/>
-                            <constraint firstItem="hU1-cW-dfL" firstAttribute="trailing" secondItem="xef-o9-CeU" secondAttribute="trailing" id="Hyq-80-60X"/>
+                            <constraint firstItem="hU1-cW-dfL" firstAttribute="trailing" secondItem="xef-o9-CeU" secondAttribute="trailing" constant="2" id="Hyq-80-60X"/>
                             <constraint firstItem="jkt-cN-vIV" firstAttribute="leading" secondItem="IDn-Pp-bKs" secondAttribute="leading" id="IhI-id-a0y"/>
                             <constraint firstItem="xef-o9-CeU" firstAttribute="trailing" secondItem="YSe-jN-lVu" secondAttribute="trailing" id="K5Y-zL-rz0"/>
                             <constraint firstItem="PQK-Qf-GnG" firstAttribute="leading" secondItem="jpX-jc-4Hi" secondAttribute="leading" id="KKf-bX-xr3"/>
@@ -1224,21 +1223,21 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                             <constraint firstItem="tFc-h0-Cvu" firstAttribute="top" secondItem="bYn-cK-K5N" secondAttribute="top" id="W9v-SF-c3X"/>
                             <constraint firstItem="PQK-Qf-GnG" firstAttribute="leading" secondItem="bws-24-cY3" secondAttribute="leading" constant="16" id="WV4-GD-gqF"/>
                             <constraint firstItem="m9K-VN-Ve5" firstAttribute="leading" secondItem="CqU-1F-DBv" secondAttribute="leading" id="Xcb-PB-VcI"/>
-                            <constraint firstItem="bYn-cK-K5N" firstAttribute="leading" secondItem="tFc-h0-Cvu" secondAttribute="trailing" constant="7" id="Xj3-QZ-SUN"/>
+                            <constraint firstItem="bYn-cK-K5N" firstAttribute="leading" secondItem="tFc-h0-Cvu" secondAttribute="trailing" constant="15" id="Xj3-QZ-SUN"/>
                             <constraint firstItem="Y5r-7G-SL4" firstAttribute="top" secondItem="CqU-1F-DBv" secondAttribute="bottom" constant="3" id="ZGY-23-cgF"/>
                             <constraint firstItem="m9K-VN-Ve5" firstAttribute="bottom" secondItem="Fio-fA-bUc" secondAttribute="bottom" id="Zpu-96-jLv"/>
                             <constraint firstItem="tFc-h0-Cvu" firstAttribute="bottom" secondItem="bYn-cK-K5N" secondAttribute="bottom" id="aLv-Wp-hRh"/>
                             <constraint firstItem="iIf-S7-wcg" firstAttribute="top" secondItem="jpX-jc-4Hi" secondAttribute="bottom" constant="7" id="auj-2u-765"/>
                             <constraint firstItem="eeY-KT-ViY" firstAttribute="leading" secondItem="bws-24-cY3" secondAttribute="leading" constant="123" id="bxx-zn-gUW"/>
                             <constraint firstAttribute="trailing" secondItem="eeY-KT-ViY" secondAttribute="trailing" constant="124" id="c48-0I-NPS"/>
-                            <constraint firstItem="y9u-6V-pdB" firstAttribute="leading" secondItem="jpX-jc-4Hi" secondAttribute="trailing" constant="1.5" id="cBy-z7-jT6"/>
+                            <constraint firstItem="y9u-6V-pdB" firstAttribute="leading" secondItem="jpX-jc-4Hi" secondAttribute="trailing" constant="19" id="cBy-z7-jT6"/>
                             <constraint firstItem="Y5r-7G-SL4" firstAttribute="leading" secondItem="tFc-h0-Cvu" secondAttribute="leading" id="cI8-Cj-Iof"/>
                             <constraint firstItem="Y5r-7G-SL4" firstAttribute="bottom" secondItem="hU1-cW-dfL" secondAttribute="bottom" id="d5w-4j-3e9"/>
                             <constraint firstItem="iIf-S7-wcg" firstAttribute="top" secondItem="jkt-cN-vIV" secondAttribute="top" id="dqC-u9-sK1"/>
                             <constraint firstItem="CqU-1F-DBv" firstAttribute="leading" secondItem="Y5r-7G-SL4" secondAttribute="leading" id="hKF-LH-m0e"/>
                             <constraint firstItem="3kV-Ne-XpJ" firstAttribute="bottom" secondItem="YSe-jN-lVu" secondAttribute="bottom" id="jlt-KF-9mY"/>
                             <constraint firstItem="PQK-Qf-GnG" firstAttribute="top" secondItem="IDn-Pp-bKs" secondAttribute="bottom" constant="35" id="lFX-Qx-wij"/>
-                            <constraint firstItem="nn1-P2-9QY" firstAttribute="trailing" secondItem="hU1-cW-dfL" secondAttribute="trailing" id="lJW-uY-MvV"/>
+                            <constraint firstItem="nn1-P2-9QY" firstAttribute="trailing" secondItem="hU1-cW-dfL" secondAttribute="trailing" constant="-2" id="lJW-uY-MvV"/>
                             <constraint firstItem="tFc-h0-Cvu" firstAttribute="top" secondItem="3kV-Ne-XpJ" secondAttribute="bottom" constant="6" id="lJo-CR-zAW"/>
                             <constraint firstAttribute="trailing" secondItem="PQK-Qf-GnG" secondAttribute="trailing" constant="16" id="lNv-OE-2VI"/>
                             <constraint firstItem="y4m-hX-Hwy" firstAttribute="leading" secondItem="3kV-Ne-XpJ" secondAttribute="leading" id="mHo-vh-ljk"/>
@@ -1247,9 +1246,9 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                             <constraint firstItem="y4m-hX-Hwy" firstAttribute="top" secondItem="Y5r-7G-SL4" secondAttribute="bottom" constant="3" id="oky-ji-kgQ"/>
                             <constraint firstItem="xef-o9-CeU" firstAttribute="leading" secondItem="y4m-hX-Hwy" secondAttribute="trailing" constant="7" id="paY-Y4-Fcf"/>
                             <constraint firstAttribute="trailing" secondItem="IDn-Pp-bKs" secondAttribute="trailing" constant="90" id="qTW-f5-30D"/>
-                            <constraint firstItem="hU1-cW-dfL" firstAttribute="leading" secondItem="Y5r-7G-SL4" secondAttribute="trailing" constant="2" id="qsr-WY-XJi"/>
+                            <constraint firstItem="hU1-cW-dfL" firstAttribute="leading" secondItem="Y5r-7G-SL4" secondAttribute="trailing" constant="8.5" id="qsr-WY-XJi"/>
                             <constraint firstItem="Y5r-7G-SL4" firstAttribute="top" secondItem="hU1-cW-dfL" secondAttribute="top" id="tUa-yo-xfg"/>
-                            <constraint firstItem="YSe-jN-lVu" firstAttribute="trailing" secondItem="bYn-cK-K5N" secondAttribute="trailing" constant="-2" id="tsf-Uc-fMP"/>
+                            <constraint firstItem="YSe-jN-lVu" firstAttribute="trailing" secondItem="bYn-cK-K5N" secondAttribute="trailing" constant="-3" id="tsf-Uc-fMP"/>
                             <constraint firstItem="m9K-VN-Ve5" firstAttribute="top" secondItem="Fio-fA-bUc" secondAttribute="top" id="vdB-XR-EjT"/>
                             <constraint firstItem="jpX-jc-4Hi" firstAttribute="bottom" secondItem="y9u-6V-pdB" secondAttribute="bottom" id="vlt-x4-cCG"/>
                             <constraint firstItem="y4m-hX-Hwy" firstAttribute="bottom" secondItem="xef-o9-CeU" secondAttribute="bottom" id="wlh-Wt-wNp"/>
@@ -1259,7 +1258,7 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                     <navigationItem key="navigationItem" title="Step 3" id="y60-3q-Jar">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="e3k-h4-JAk">
                             <connections>
-                                <segue destination="axA-iw-7aH" kind="show" identifier="toStep4" id="Fdf-Ax-Pmy"/>
+                                <action selector="nextButtonTapped:" destination="rmO-M7-d1A" id="ViK-7Y-vW6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1272,6 +1271,7 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                         <outlet property="makeModelTextField" destination="xef-o9-CeU" id="2ZU-HX-ahk"/>
                         <outlet property="nameTextField" destination="y9u-6V-pdB" id="kvs-vk-g0S"/>
                         <outlet property="phoneTextField" destination="Fio-fA-bUc" id="lUg-YL-mhl"/>
+                        <segue destination="axA-iw-7aH" kind="show" identifier="toStep4" id="LKo-dv-VCX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhX-IT-hGo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1353,7 +1353,7 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                     <navigationItem key="navigationItem" title="Step 4" id="BKP-Mb-8cx">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="Nre-Ch-R1c">
                             <connections>
-                                <segue destination="S4W-l3-p6x" kind="show" id="zsr-9P-Oua"/>
+                                <segue destination="S4W-l3-p6x" kind="show" identifier="toStep5" id="zsr-9P-Oua"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1548,7 +1548,7 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                     <navigationItem key="navigationItem" title="Step 5" id="AQM-fS-pLr">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="jot-ME-y2j">
                             <connections>
-                                <segue destination="5GA-IW-TNd" kind="show" id="j4t-3G-22q"/>
+                                <action selector="nextButtonTapped:" destination="S4W-l3-p6x" id="KD0-Vc-pg0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1559,6 +1559,7 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                         <outlet property="witnessEmailTextField" destination="UoO-XO-Fid" id="NSn-0N-cKV"/>
                         <outlet property="witnessNameTextField" destination="8ft-GQ-A5i" id="Yea-xt-zad"/>
                         <outlet property="witnessPhoneTextField" destination="vz6-Gi-c2a" id="6V1-nN-dsH"/>
+                        <segue destination="5GA-IW-TNd" kind="show" identifier="toStep6" id="9Z8-Kp-KLa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjY-Wd-pjd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1626,12 +1627,13 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                     <navigationItem key="navigationItem" title="Step 6" id="hvo-8O-SFq">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="6hj-Nj-KYi">
                             <connections>
-                                <segue destination="0UQ-wn-yzb" kind="show" identifier="toStep7" id="E6q-yy-g89"/>
+                                <action selector="nextButtonTapped:" destination="5GA-IW-TNd" id="NC4-gf-F3u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="statementTextView" destination="l3z-Ox-Lfd" id="y9K-Nv-tV7"/>
+                        <segue destination="0UQ-wn-yzb" kind="show" identifier="toStep7" id="F03-Ti-1GE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WpL-lJ-uP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1723,13 +1725,14 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                     <navigationItem key="navigationItem" title="Step 7" id="eGf-Wb-wV2">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="THT-yn-nXf">
                             <connections>
-                                <segue destination="MTD-bP-YzM" kind="show" identifier="toStep8" id="VZD-zo-snH"/>
+                                <action selector="nextButtonTapped:" destination="0UQ-wn-yzb" id="rFt-eR-r0b"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="badgeNumberTextField" destination="x7e-PU-GDp" id="2Za-Si-6nO"/>
                         <outlet property="officerNameTextField" destination="ZeG-nT-z8G" id="tMG-vb-8Om"/>
+                        <segue destination="MTD-bP-YzM" kind="show" identifier="toStep8" id="neq-0S-Z5l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tU2-hd-9OT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1800,7 +1803,7 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
                     <navigationItem key="navigationItem" title="Step 8" id="fko-mD-cok">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="kI0-jc-5nz">
                             <connections>
-                                <segue destination="1Bf-ku-XDp" kind="show" id="pAJ-j4-MIo"/>
+                                <segue destination="1Bf-ku-XDp" kind="show" identifier="toLastStep" id="pAJ-j4-MIo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1957,7 +1960,13 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
                             <constraint firstItem="F5v-7B-cpN" firstAttribute="top" secondItem="5Wf-Qe-cqX" secondAttribute="bottom" constant="8" symbolic="YES" id="wXc-Ul-XY0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Witnesses" id="uJK-dg-crf"/>
+                    <navigationItem key="navigationItem" title="Witnesses" id="uJK-dg-crf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="01j-wO-NS5">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="1ec-fd-kMY" id="oW5-9c-czF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="witness2EmailTextField" destination="B1N-vl-8c7" id="eyq-Ax-Mgp"/>
                         <outlet property="witness2PhoneTextField" destination="dfk-iE-PHw" id="MQN-pN-0vb"/>
@@ -1969,7 +1978,7 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n0H-hJ-kgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5036" y="-740"/>
+            <point key="canvasLocation" x="5060" y="-183"/>
         </scene>
         <!--Your Statement-->
         <scene sceneID="QF2-MK-iIP">
@@ -2007,14 +2016,20 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
                             <constraint firstAttribute="trailing" secondItem="SiV-b1-Iv3" secondAttribute="trailing" constant="131" id="ris-ig-0TU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Statement" id="uXV-3M-4kI"/>
+                    <navigationItem key="navigationItem" title="Your Statement" id="uXV-3M-4kI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xPe-Dd-Jqg">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="KRj-K1-vvA" id="PfX-Jw-8RI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="statementTextView" destination="R13-6p-9UE" id="ZCD-VF-hOI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6GZ-vn-wwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5036" y="-103"/>
+            <point key="canvasLocation" x="5060" y="470"/>
         </scene>
         <!--Finished Steps View Controller-->
         <scene sceneID="pId-fQ-1cR">
@@ -2132,4 +2147,7 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
         <image name="documents" width="297" height="294"/>
         <image name="thumbsUp" width="2400" height="2400"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="GhU-3e-HJd"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -9,8 +9,6 @@
 import UIKit
 
 class AccidentReportsTableViewController: UITableViewController, AccidentReportTableViewCellDelegate {
-
-    var accidentReports: Step3?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,11 +46,14 @@ class AccidentReportsTableViewController: UITableViewController, AccidentReportT
     }
 
     // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
-    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailVC" {
+            guard let destinationVC = segue.destination as? AccidentReportDetailTableViewController,
+                let indexPath = tableView.indexPathForSelectedRow else { return }
+            destinationVC.accidentReport = Step3Controller.shared.accidentReports[indexPath.row]
+        }
+    }
 
     @IBAction func cancelButtonTapped(_ sender: Any) {
         navigationController?.dismiss(animated: true, completion: nil)

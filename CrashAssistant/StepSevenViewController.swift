@@ -9,7 +9,7 @@
 import UIKit
 
 class StepSevenViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,21 +18,18 @@ class StepSevenViewController: UIViewController {
     }
 
     func dismissKeyboard() {
-        officerNameTextField.resignFirstResponder()
-        badgeNumberTextField.resignFirstResponder()
-    }
-    
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toStep8" {
-            let destinationVC = segue.destination as? AccidentReportsTableViewController
-            
-            let accidentReports = Step3Controller.shared.accidentReports
-            destinationVC?.accidentReports = accidentReports[0]
-        }
+        view.endEditing(true)
     }
     
     @IBOutlet weak var officerNameTextField: UITextField!
     @IBOutlet weak var badgeNumberTextField: UITextField!
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        
+        guard let officer = officerNameTextField.text,
+            let badgeNumber = badgeNumberTextField.text else { return }
+        
+        Step3Controller.shared.update(officer: officer, badgeNumber: badgeNumber)
+        
+        performSegue(withIdentifier: "toStep8", sender: nil)
+    }
 }

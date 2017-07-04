@@ -9,7 +9,7 @@
 import UIKit
 
 class StepThreeViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,17 +21,6 @@ class StepThreeViewController: UIViewController {
         view.endEditing(true)
     }
     
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toStep4" {
-            let destinationVC = segue.destination as? AccidentReportsTableViewController
-            
-            let accidentReports = Step3Controller.shared.accidentReports
-            destinationVC?.accidentReports = accidentReports[0]
-        }
-    }
-
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
@@ -40,4 +29,19 @@ class StepThreeViewController: UIViewController {
     @IBOutlet weak var makeModelTextField: UITextField!
     @IBOutlet weak var colorTextField: UITextField!
     @IBOutlet weak var licensePlateTextField: UITextField!
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        
+        guard let name = nameTextField.text, !name.isEmpty,
+            let address = addressTextField.text, !address.isEmpty,
+            let phone = phoneTextField.text, !phone.isEmpty,
+            let email = emailTextField.text, !email.isEmpty,
+            let insurance = insuranceTextField.text, !insurance.isEmpty,
+            let makeAndModel = makeModelTextField.text, !makeAndModel.isEmpty,
+            let color = colorTextField.text, !color.isEmpty,
+            let licensePlate = licensePlateTextField.text, !licensePlate.isEmpty else { return }
+        
+        Step3Controller.shared.addAccidentReportWith(name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate)
+        
+        performSegue(withIdentifier: "toStep4", sender: nil)
+    }
 }

@@ -95,6 +95,8 @@ class Step3Controller {
     func delete(accidentReport: Step3) {
         let moc = CoreDataStack.context
         moc.delete(accidentReport)
+        
+        saveToPersistentStorage()
     }
     
     func fetchAccidentReports() -> [Step3] {

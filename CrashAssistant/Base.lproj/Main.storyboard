@@ -52,12 +52,6 @@
                                     <segue destination="x3w-Vp-lcP" kind="show" id="SCU-Cr-gBe"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Need to view accident reports from the past? Or view your profile?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJB-s8-upy">
-                                <rect key="frame" x="16" y="392" width="150" height="150"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Oh no! Were you involved in an accident? Let us help walk you through the appropriate steps." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsb-4E-urs">
                                 <rect key="frame" x="16" y="132" width="176" height="132"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -70,7 +64,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carcrash" translatesAutoresizingMaskIntoConstraints="NO" id="rg8-Ly-ItL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car-collision" translatesAutoresizingMaskIntoConstraints="NO" id="rg8-Ly-ItL">
                                 <rect key="frame" x="200" y="132" width="149" height="132"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -78,6 +72,12 @@
                                     <constraint firstAttribute="width" constant="149" id="ACK-jJ-Pvw"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Need to view accident reports from the past? Or view your profile?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJB-s8-upy">
+                                <rect key="frame" x="16" y="414" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.89441239458319521" green="0.93226371467597902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -91,7 +91,7 @@
                             <constraint firstItem="Hsb-4E-urs" firstAttribute="top" secondItem="0Rp-ko-C13" secondAttribute="bottom" constant="47" id="NDM-rl-sFK"/>
                             <constraint firstItem="R9a-2x-RSQ" firstAttribute="top" secondItem="Hsb-4E-urs" secondAttribute="bottom" constant="28" id="RpV-Gz-lDM"/>
                             <constraint firstItem="Hsb-4E-urs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="S97-Ok-eo3"/>
-                            <constraint firstItem="oI7-kj-uwg" firstAttribute="top" secondItem="qJB-s8-upy" secondAttribute="bottom" constant="8" id="Saa-P7-auQ"/>
+                            <constraint firstItem="oI7-kj-uwg" firstAttribute="top" secondItem="qJB-s8-upy" secondAttribute="bottom" constant="-14" id="Saa-P7-auQ"/>
                             <constraint firstItem="sSo-00-sXl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TXB-qH-gfA"/>
                             <constraint firstItem="sSo-00-sXl" firstAttribute="leading" secondItem="qJB-s8-upy" secondAttribute="trailing" constant="17" id="Xgu-hT-yMm"/>
                             <constraint firstItem="0Rp-ko-C13" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="80" id="ZE9-jP-t10"/>
@@ -101,7 +101,7 @@
                             <constraint firstItem="rg8-Ly-ItL" firstAttribute="top" secondItem="Hsb-4E-urs" secondAttribute="top" id="rxC-hE-pZn"/>
                             <constraint firstAttribute="trailing" secondItem="0Rp-ko-C13" secondAttribute="trailing" constant="81" id="tsi-3s-I5X"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oI7-kj-uwg" secondAttribute="bottom" constant="84" id="uFO-QF-RbA"/>
-                            <constraint firstItem="qJB-s8-upy" firstAttribute="top" secondItem="R9a-2x-RSQ" secondAttribute="bottom" constant="67" id="y70-ja-47s"/>
+                            <constraint firstItem="qJB-s8-upy" firstAttribute="top" secondItem="R9a-2x-RSQ" secondAttribute="bottom" constant="89" id="y70-ja-47s"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1134,7 +1134,7 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-6V-pdB">
-                                <rect key="frame" x="89" y="386" width="270" height="30"/>
+                                <rect key="frame" x="78" y="386" width="281" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1152,7 +1152,7 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hU1-cW-dfL">
-                                <rect key="frame" x="237" y="523" width="124" height="30"/>
+                                <rect key="frame" x="237" y="523" width="125" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1170,7 +1170,7 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYn-cK-K5N">
-                                <rect key="frame" x="139" y="626" width="223" height="30"/>
+                                <rect key="frame" x="132" y="626" width="230" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1213,7 +1213,7 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                             <constraint firstItem="YSe-jN-lVu" firstAttribute="leading" secondItem="3kV-Ne-XpJ" secondAttribute="trailing" constant="9.5" id="EyG-3a-pU7"/>
                             <constraint firstItem="3kV-Ne-XpJ" firstAttribute="top" secondItem="y4m-hX-Hwy" secondAttribute="bottom" constant="4" id="HI5-Lb-lDM"/>
                             <constraint firstItem="iIf-S7-wcg" firstAttribute="bottom" secondItem="jkt-cN-vIV" secondAttribute="bottom" id="Hdv-sY-r4r"/>
-                            <constraint firstItem="hU1-cW-dfL" firstAttribute="trailing" secondItem="xef-o9-CeU" secondAttribute="trailing" constant="2" id="Hyq-80-60X"/>
+                            <constraint firstItem="hU1-cW-dfL" firstAttribute="trailing" secondItem="xef-o9-CeU" secondAttribute="trailing" constant="3" id="Hyq-80-60X"/>
                             <constraint firstItem="jkt-cN-vIV" firstAttribute="leading" secondItem="IDn-Pp-bKs" secondAttribute="leading" id="IhI-id-a0y"/>
                             <constraint firstItem="xef-o9-CeU" firstAttribute="trailing" secondItem="YSe-jN-lVu" secondAttribute="trailing" id="K5Y-zL-rz0"/>
                             <constraint firstItem="PQK-Qf-GnG" firstAttribute="leading" secondItem="jpX-jc-4Hi" secondAttribute="leading" id="KKf-bX-xr3"/>
@@ -1224,21 +1224,21 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                             <constraint firstItem="tFc-h0-Cvu" firstAttribute="top" secondItem="bYn-cK-K5N" secondAttribute="top" id="W9v-SF-c3X"/>
                             <constraint firstItem="PQK-Qf-GnG" firstAttribute="leading" secondItem="bws-24-cY3" secondAttribute="leading" constant="16" id="WV4-GD-gqF"/>
                             <constraint firstItem="m9K-VN-Ve5" firstAttribute="leading" secondItem="CqU-1F-DBv" secondAttribute="leading" id="Xcb-PB-VcI"/>
-                            <constraint firstItem="bYn-cK-K5N" firstAttribute="leading" secondItem="tFc-h0-Cvu" secondAttribute="trailing" constant="15" id="Xj3-QZ-SUN"/>
+                            <constraint firstItem="bYn-cK-K5N" firstAttribute="leading" secondItem="tFc-h0-Cvu" secondAttribute="trailing" constant="8" id="Xj3-QZ-SUN"/>
                             <constraint firstItem="Y5r-7G-SL4" firstAttribute="top" secondItem="CqU-1F-DBv" secondAttribute="bottom" constant="3" id="ZGY-23-cgF"/>
                             <constraint firstItem="m9K-VN-Ve5" firstAttribute="bottom" secondItem="Fio-fA-bUc" secondAttribute="bottom" id="Zpu-96-jLv"/>
                             <constraint firstItem="tFc-h0-Cvu" firstAttribute="bottom" secondItem="bYn-cK-K5N" secondAttribute="bottom" id="aLv-Wp-hRh"/>
                             <constraint firstItem="iIf-S7-wcg" firstAttribute="top" secondItem="jpX-jc-4Hi" secondAttribute="bottom" constant="7" id="auj-2u-765"/>
                             <constraint firstItem="eeY-KT-ViY" firstAttribute="leading" secondItem="bws-24-cY3" secondAttribute="leading" constant="123" id="bxx-zn-gUW"/>
                             <constraint firstAttribute="trailing" secondItem="eeY-KT-ViY" secondAttribute="trailing" constant="124" id="c48-0I-NPS"/>
-                            <constraint firstItem="y9u-6V-pdB" firstAttribute="leading" secondItem="jpX-jc-4Hi" secondAttribute="trailing" constant="19" id="cBy-z7-jT6"/>
+                            <constraint firstItem="y9u-6V-pdB" firstAttribute="leading" secondItem="jpX-jc-4Hi" secondAttribute="trailing" constant="8" id="cBy-z7-jT6"/>
                             <constraint firstItem="Y5r-7G-SL4" firstAttribute="leading" secondItem="tFc-h0-Cvu" secondAttribute="leading" id="cI8-Cj-Iof"/>
                             <constraint firstItem="Y5r-7G-SL4" firstAttribute="bottom" secondItem="hU1-cW-dfL" secondAttribute="bottom" id="d5w-4j-3e9"/>
                             <constraint firstItem="iIf-S7-wcg" firstAttribute="top" secondItem="jkt-cN-vIV" secondAttribute="top" id="dqC-u9-sK1"/>
                             <constraint firstItem="CqU-1F-DBv" firstAttribute="leading" secondItem="Y5r-7G-SL4" secondAttribute="leading" id="hKF-LH-m0e"/>
                             <constraint firstItem="3kV-Ne-XpJ" firstAttribute="bottom" secondItem="YSe-jN-lVu" secondAttribute="bottom" id="jlt-KF-9mY"/>
                             <constraint firstItem="PQK-Qf-GnG" firstAttribute="top" secondItem="IDn-Pp-bKs" secondAttribute="bottom" constant="35" id="lFX-Qx-wij"/>
-                            <constraint firstItem="nn1-P2-9QY" firstAttribute="trailing" secondItem="hU1-cW-dfL" secondAttribute="trailing" constant="-2" id="lJW-uY-MvV"/>
+                            <constraint firstItem="nn1-P2-9QY" firstAttribute="trailing" secondItem="hU1-cW-dfL" secondAttribute="trailing" constant="-3" id="lJW-uY-MvV"/>
                             <constraint firstItem="tFc-h0-Cvu" firstAttribute="top" secondItem="3kV-Ne-XpJ" secondAttribute="bottom" constant="6" id="lJo-CR-zAW"/>
                             <constraint firstAttribute="trailing" secondItem="PQK-Qf-GnG" secondAttribute="trailing" constant="16" id="lNv-OE-2VI"/>
                             <constraint firstItem="y4m-hX-Hwy" firstAttribute="leading" secondItem="3kV-Ne-XpJ" secondAttribute="leading" id="mHo-vh-ljk"/>
@@ -2145,7 +2145,7 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
     </scenes>
     <resources>
         <image name="camera" width="900" height="600"/>
-        <image name="carcrash" width="251" height="160"/>
+        <image name="car-collision" width="512" height="512"/>
         <image name="documents" width="297" height="294"/>
         <image name="thumbsUp" width="2400" height="2400"/>
     </resources>

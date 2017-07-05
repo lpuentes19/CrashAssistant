@@ -29,7 +29,7 @@ class StepOneViewController: UIViewController {
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let callAction = UIAlertAction(title: "Call", style: .default) { (_) in
-            guard let url = URL(string: "tel://3854450303") else { return }
+            guard let url = URL(string: "tel://911") else { return }
             
             UIApplication.shared.open(url)
         }

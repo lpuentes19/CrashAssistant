@@ -20,17 +20,20 @@ class AccidentReportDetailTableViewController: UITableViewController, UITextFiel
         super.viewDidLoad()
         
         updateDetailAccidentReport()
-        
-        self.nameTextField.delegate = self
-        self.addressTextField.delegate = self
-        self.emailTextField.delegate = self
-        self.phoneTextField.delegate = self
-        self.insuranceTextField.delegate = self
-        self.makeAndModelTextField.delegate = self
-        self.licensePlateTextField.delegate = self
-        self.colorTextField.delegate = self
-        self.officerTextField.delegate = self
-        self.badgeNumberTextField.delegate = self
+        makeTextFieldsDelegates()
+    }
+    
+    func makeTextFieldsDelegates() {
+        nameTextField.delegate = self
+        addressTextField.delegate = self
+        emailTextField.delegate = self
+        phoneTextField.delegate = self
+        insuranceTextField.delegate = self
+        makeAndModelTextField.delegate = self
+        licensePlateTextField.delegate = self
+        colorTextField.delegate = self
+        officerTextField.delegate = self
+        badgeNumberTextField.delegate = self
     }
     
     func updateDetailAccidentReport() {
@@ -58,17 +61,12 @@ class AccidentReportDetailTableViewController: UITableViewController, UITextFiel
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toWitnessVC" {
             guard let destinationVC = segue.destination as? WitnessesViewController else { return }
-            destinationVC.witnessName = accidentReport?.witnessName
-            destinationVC.witnessEmail = accidentReport?.witnessEmail
-            destinationVC.witnessPhone = accidentReport?.witnessPhone
-            destinationVC.witness2Name = accidentReport?.witness2Name
-            destinationVC.witness2Email = accidentReport?.witness2Email
-            destinationVC.witness2Phone = accidentReport?.witness2Phone
+            destinationVC.accidentReport = accidentReport
         }
         
         if segue.identifier == "toStatementVC" {
             guard let destinationVC = segue.destination as? StatementViewController else { return }
-            destinationVC.statement = accidentReport?.statement
+            destinationVC.accidentReport = accidentReport
         }
     }
     
@@ -101,7 +99,7 @@ class AccidentReportDetailTableViewController: UITableViewController, UITextFiel
             Step3Controller.shared.addAccidentReportWith(name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate, officer: officer, badgeNumber: badgeNumber)
         }
 //        Step3Controller.shared.update(name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate)
-//        Step3Controller.shared.update(officer: office, badgeNumber: badgeNumber)
+//        Step3Controller.shared.update(officer: officer, badgeNumber: badgeNumber)
         
         performSegue(withIdentifier: "backToAccidentReport", sender: nil)
     }

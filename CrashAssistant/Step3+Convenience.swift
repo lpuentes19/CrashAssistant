@@ -34,6 +34,4 @@ extension Step3 {
         self.witness2Email = witness2Email
         self.witness2Phone = witness2Phone
     }
-    
-    
 }

@@ -31,14 +31,14 @@ class StepThreeViewController: UIViewController {
     @IBOutlet weak var licensePlateTextField: UITextField!
     @IBAction func nextButtonTapped(_ sender: Any) {
         
-        guard let name = nameTextField.text, !name.isEmpty,
-            let address = addressTextField.text, !address.isEmpty,
-            let phone = phoneTextField.text, !phone.isEmpty,
-            let email = emailTextField.text, !email.isEmpty,
-            let insurance = insuranceTextField.text, !insurance.isEmpty,
-            let makeAndModel = makeModelTextField.text, !makeAndModel.isEmpty,
-            let color = colorTextField.text, !color.isEmpty,
-            let licensePlate = licensePlateTextField.text, !licensePlate.isEmpty else { return }
+        guard let name = nameTextField.text,
+            let address = addressTextField.text,
+            let phone = phoneTextField.text,
+            let email = emailTextField.text,
+            let insurance = insuranceTextField.text,
+            let makeAndModel = makeModelTextField.text,
+            let color = colorTextField.text,
+            let licensePlate = licensePlateTextField.text else { return }
         
         Step3Controller.shared.addAccidentReportWith(name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate)
         

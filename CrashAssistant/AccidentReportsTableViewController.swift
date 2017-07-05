@@ -54,6 +54,7 @@ class AccidentReportsTableViewController: UITableViewController, AccidentReportT
             destinationVC.accidentReport = Step3Controller.shared.accidentReports[indexPath.row]
         }
     }
+    
 
     @IBAction func cancelButtonTapped(_ sender: Any) {
         navigationController?.dismiss(animated: true, completion: nil)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951A39F41F0D3A9C000096D3 /* Profile+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A39F31F0D3A9C000096D3 /* Profile+Convenience.swift */; };
+		951A39F61F0D3CFF000096D3 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A39F51F0D3CFF000096D3 /* ProfileController.swift */; };
 		953D74671F041CC700BEDBBD /* StepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D74661F041CC700BEDBBD /* StepOneViewController.swift */; };
 		953D74691F041D4600BEDBBD /* StepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D74681F041D4600BEDBBD /* StepTwoViewController.swift */; };
 		953D746B1F041D5800BEDBBD /* StepThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D746A1F041D5800BEDBBD /* StepThreeViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		951A39F31F0D3A9C000096D3 /* Profile+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Profile+Convenience.swift"; sourceTree = "<group>"; };
+		951A39F51F0D3CFF000096D3 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		953D74661F041CC700BEDBBD /* StepOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepOneViewController.swift; sourceTree = "<group>"; };
 		953D74681F041D4600BEDBBD /* StepTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTwoViewController.swift; sourceTree = "<group>"; };
 		953D746A1F041D5800BEDBBD /* StepThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepThreeViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 			children = (
 				955D03301F02C086007EE283 /* CrashAssistant.xcdatamodeld */,
 				95EABDEF1F06B94B0040BF33 /* Step3+Convenience.swift */,
+				951A39F31F0D3A9C000096D3 /* Profile+Convenience.swift */,
 				95EABDF11F06B9E60040BF33 /* CoreDataStack.swift */,
 			);
 			name = Models;
@@ -172,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				95EABDF31F06BB840040BF33 /* Step3Controller.swift */,
+				951A39F51F0D3CFF000096D3 /* ProfileController.swift */,
 			);
 			name = ModelControllers;
 			sourceTree = "<group>";
@@ -180,9 +186,9 @@
 			isa = PBXGroup;
 			children = (
 				95F174951F04434A00CF65AD /* AccidentReportsTableViewController.swift */,
+				95F1749B1F0446F700CF65AD /* AccidentReportDetailTableViewController.swift */,
 				95F174971F0443EB00CF65AD /* ProfileTableViewController.swift */,
 				95F174991F04466D00CF65AD /* EmergencyListTableViewController.swift */,
-				95F1749B1F0446F700CF65AD /* AccidentReportDetailTableViewController.swift */,
 				95F174A31F0448E700CF65AD /* WitnessesViewController.swift */,
 				95F174A71F04496100CF65AD /* StatementViewController.swift */,
 			);
@@ -271,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95F174961F04434A00CF65AD /* AccidentReportsTableViewController.swift in Sources */,
+				951A39F41F0D3A9C000096D3 /* Profile+Convenience.swift in Sources */,
 				95EABDF41F06BB840040BF33 /* Step3Controller.swift in Sources */,
 				955D03401F02C55E007EE283 /* InitialViewController.swift in Sources */,
 				95E872E01F05716900386BFE /* UINavigation+Pop.swift in Sources */,
@@ -283,6 +290,7 @@
 				953D74751F041DF400BEDBBD /* StepEightViewController.swift in Sources */,
 				95F174981F0443EB00CF65AD /* ProfileTableViewController.swift in Sources */,
 				95F1749C1F0446F700CF65AD /* AccidentReportDetailTableViewController.swift in Sources */,
+				951A39F61F0D3CFF000096D3 /* ProfileController.swift in Sources */,
 				955D03321F02C086007EE283 /* CrashAssistant.xcdatamodeld in Sources */,
 				955D032A1F02C086007EE283 /* AppDelegate.swift in Sources */,
 				95EABDF21F06B9E60040BF33 /* CoreDataStack.swift in Sources */,

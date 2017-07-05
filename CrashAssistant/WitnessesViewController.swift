@@ -10,13 +10,13 @@ import UIKit
 
 class WitnessesViewController: UIViewController {
     
-    var accidentReport: Step3?
-    var witnessName: String?
-    var witnessEmail: String?
-    var witnessPhone: String?
-    var witness2Name: String?
-    var witness2Email: String?
-    var witness2Phone: String?
+    var accidentReport: Step3? {
+        didSet {
+            if isViewLoaded {
+                updateWitnesses()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +24,16 @@ class WitnessesViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(WitnessesViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
-        witnessNameTextField.text = witnessName
-        witnessEmailTextField.text = witnessEmail
-        witnessPhoneTextField.text = witnessPhone
-        witness2nameTextField.text = witness2Name
-        witness2EmailTextField.text = witness2Email
-        witness2PhoneTextField.text = witness2Phone
+        updateWitnesses()
+    }
+    
+    func updateWitnesses() {
+        witnessNameTextField.text = accidentReport?.witnessName
+        witnessEmailTextField.text = accidentReport?.witnessEmail
+        witnessPhoneTextField.text = accidentReport?.witnessPhone
+        witness2nameTextField.text = accidentReport?.witness2Name
+        witness2EmailTextField.text = accidentReport?.witness2Email
+        witness2PhoneTextField.text = accidentReport?.witness2Phone
     }
 
     func dismissKeyboard() {
@@ -50,11 +54,15 @@ class WitnessesViewController: UIViewController {
             let witness2Name = witness2nameTextField.text,
             let witness2Email = witness2EmailTextField.text,
             let witness2Phone = witness2PhoneTextField.text else { return }
+
+        guard let accidentReport = accidentReport else { return }
+        Step3Controller.shared.update(accidentReport: accidentReport, witnessName: witnessName, witnessEmail: witnessEmail, witnessPhone: witnessPhone, witness2Name: witness2Name, witness2Email: witness2Email, witness2Phone: witness2Phone)
         
-        if let accidentReport = accidentReport {
-            Step3Controller.shared.update(accidentReport: accidentReport, witnessName: witnessName, witnessEmail: witnessEmail, witnessPhone: witnessPhone, witness2Name: witness2Name, witness2Email: witness2Email, witness2Phone: witness2Phone)
-        } else {
-            Step3Controller.shared.addAccidentReportWith(witnessName: witnessName, witnessEmail: witnessEmail, witnessPhone: witnessPhone, witness2Name: witness2Name, witness2Email: witness2Email, witness2Phone: witness2Phone)
-        }
+        let notificationController = UIAlertController(title: "Saved", message: "Your witnesses have been successfully saved.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        
+        notificationController.addAction(okAction)
+        
+        self.present(notificationController, animated: true, completion: nil)
     }
 }

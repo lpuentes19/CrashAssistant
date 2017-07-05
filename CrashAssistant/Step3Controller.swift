@@ -13,10 +13,8 @@ class Step3Controller {
     
     static let shared = Step3Controller()
     
-    var step3: Step3? = nil
-    
+    var step3: Step3?
     var accidentReports: [Step3] {
-        
         return fetchAccidentReports()
     }
     
@@ -30,31 +28,6 @@ class Step3Controller {
     func addAccidentReportWith(name: String, address: String, phone: String, email: String, insurance: String, makeAndModel: String, color: String, licensePlate: String, officer: String, badgeNumber: String) {
         
         step3 = Step3(name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate, officer: officer, badgeNumber: badgeNumber)
-        
-        saveToPersistentStorage()
-    }
-    // This func is used to edit and save info on the Witness VC
-
-    func addAccidentReportWith(witnessName: String, witnessEmail: String, witnessPhone: String, witness2Name: String, witness2Email: String, witness2Phone: String) {
-        step3?.witnessName = witnessName
-        step3?.witnessEmail = witnessEmail
-        step3?.witnessPhone = witnessPhone
-        step3?.witness2Name = witness2Name
-        step3?.witness2Email = witness2Email
-        step3?.witness2Phone = witness2Phone
-        
-        saveToPersistentStorage()
-    }
-    
-    func update(name: String, address: String, phone: String, email: String, insurance: String, makeAndModel: String, color: String, licensePlate: String) {
-        step3?.name = name
-        step3?.address = address
-        step3?.phone = phone
-        step3?.email = email
-        step3?.insurance = insurance
-        step3?.makeAndModel = makeAndModel
-        step3?.color = color
-        step3?.licensePlate = licensePlate
         
         saveToPersistentStorage()
     }
@@ -75,7 +48,15 @@ class Step3Controller {
         saveToPersistentStorage()
     }
     
+    func update(accident: Step3, statement: String) {
+        
+        accident.statement = statement
+        
+        saveToPersistentStorage()
+    }
+    
     func update(statement: String) {
+        
         step3?.statement = statement
         
         saveToPersistentStorage()
@@ -100,6 +81,7 @@ class Step3Controller {
     }
     // This func is used to edit and save info on the Witness VC
     func update(accidentReport: Step3, witnessName: String, witnessEmail: String, witnessPhone: String, witness2Name: String, witness2Email: String, witness2Phone: String) {
+        
         accidentReport.witnessName = witnessName
         accidentReport.witnessEmail = witnessEmail
         accidentReport.witnessPhone = witnessPhone

@@ -906,6 +906,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addEmergencyContactButton" destination="n5b-Du-dI7" id="Ow6-0E-S11"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIy-4C-lNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1753,11 +1756,11 @@ authorities yet, it’s now time to do so. You want to make sure an police repor
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qh-Z1-uOY">
-                                <rect key="frame" x="16" y="194" width="343" height="264"/>
+                                <rect key="frame" x="16" y="150" width="343" height="422"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Finally, the last thing to do in this situation is to contact the insurance company. Cooperate with them and tell
+                                <mutableString key="text">Finally, the last thing to do in this situation is to contact the insurance company. Cooperate with them and tell
 them what happened with detailed facts. This is where the officer’s report and
-witnesses reports come in handy. Feel to share that information with them. Please be as honest as possible because if the insurance company found out you were lying, it can lead to denial of coverage for the accident.</string>
+witnesses reports come in handy. Feel to share that information with them. Please be as honest as possible because if the insurance company found out you were lying, it can lead to denial of coverage for the accident. This step does not need to be completed at the scene of the accident as you may still be shaken up, but please remember to do this so that you stay covered.</mutableString>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -1773,32 +1776,19 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1z-Kt-I0N">
-                                <rect key="frame" x="110" y="543" width="155" height="33"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
-                                <state key="normal" title="Call Insurance Co.">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="callInsuranceButtonTapped:" destination="MTD-bP-YzM" eventType="touchUpInside" id="gwx-zq-frc"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Ahj-Cd-Py8" secondAttribute="trailing" constant="124" id="1Xj-F6-AAS"/>
                             <constraint firstItem="Ahj-Cd-Py8" firstAttribute="leading" secondItem="tq3-pF-fLc" secondAttribute="leading" constant="123" id="8rp-j3-pqa"/>
-                            <constraint firstItem="6uX-mf-UST" firstAttribute="top" secondItem="R1z-Kt-I0N" secondAttribute="bottom" constant="91" id="JTg-z5-n4m"/>
                             <constraint firstAttribute="trailing" secondItem="9Qh-Z1-uOY" secondAttribute="trailing" constant="16" id="PVw-pp-FxN"/>
-                            <constraint firstItem="R1z-Kt-I0N" firstAttribute="leading" secondItem="tq3-pF-fLc" secondAttribute="leading" constant="110" id="YUa-gv-cgf"/>
                             <constraint firstItem="LfK-P3-Ct4" firstAttribute="leading" secondItem="tq3-pF-fLc" secondAttribute="leading" constant="70" id="cYd-Rq-V7V"/>
                             <constraint firstItem="Ahj-Cd-Py8" firstAttribute="top" secondItem="m0M-9F-o5W" secondAttribute="bottom" constant="8" id="dYV-UD-5qA"/>
-                            <constraint firstItem="R1z-Kt-I0N" firstAttribute="top" secondItem="9Qh-Z1-uOY" secondAttribute="bottom" constant="85" id="edY-14-p7m"/>
-                            <constraint firstItem="9Qh-Z1-uOY" firstAttribute="top" secondItem="LfK-P3-Ct4" secondAttribute="bottom" constant="52" id="fJ8-3z-Eba"/>
+                            <constraint firstItem="9Qh-Z1-uOY" firstAttribute="top" secondItem="LfK-P3-Ct4" secondAttribute="bottom" constant="8" id="fJ8-3z-Eba"/>
                             <constraint firstItem="9Qh-Z1-uOY" firstAttribute="leading" secondItem="tq3-pF-fLc" secondAttribute="leading" constant="16" id="gU8-va-yKp"/>
-                            <constraint firstAttribute="trailing" secondItem="R1z-Kt-I0N" secondAttribute="trailing" constant="110" id="gq1-HM-jiX"/>
                             <constraint firstAttribute="trailing" secondItem="LfK-P3-Ct4" secondAttribute="trailing" constant="70" id="pbq-Gc-Myc"/>
                             <constraint firstItem="LfK-P3-Ct4" firstAttribute="top" secondItem="Ahj-Cd-Py8" secondAttribute="bottom" constant="8" id="uAG-nw-Tga"/>
+                            <constraint firstItem="6uX-mf-UST" firstAttribute="top" secondItem="9Qh-Z1-uOY" secondAttribute="bottom" constant="95" id="zD1-w0-ldh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Step 8" id="fko-mD-cok">
@@ -1808,9 +1798,6 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="callInsuranceButton" destination="R1z-Kt-I0N" id="iWc-h3-9kh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wxz-tv-acB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2150,7 +2137,7 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
         <image name="thumbsUp" width="2400" height="2400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kFl-Sa-J0W"/>
         <segue reference="cPS-q6-ffm"/>
+        <segue reference="wyp-yK-UGl"/>
     </inferredMetricsTieBreakers>
 </document>

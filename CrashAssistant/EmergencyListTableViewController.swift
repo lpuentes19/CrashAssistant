@@ -41,16 +41,37 @@ class EmergencyListTableViewController: UITableViewController, CNContactPickerDe
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let emergencyContact = EmergencyContactsController.shared.emergencyContacts[indexPath.row]
+        guard let number = emergencyContact.number else { return }
+        
+        let alertController = UIAlertController(title: "Emergency Contact", message: "Are you sure you wish to call this emergency contact?", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let callAction = UIAlertAction(title: "Call", style: .default) { (_) in
+            guard let url = URL(string: "tel://" + number) else { return }
+            
+            UIApplication.shared.open(url)
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(callAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     // MARK: - Contact Picker Method(s)
     
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
-        let mobileNumber = (contact.phoneNumbers.first?.value)!.stringValue
+        let number = (contact.phoneNumbers.first?.value)!.stringValue
         let contactName = "\(contact.givenName)"
         
-        EmergencyContactsController.shared.addEmergencyContact(name: contactName, number: mobileNumber)
+        EmergencyContactsController.shared.addEmergencyContact(name: contactName, number: number)
         tableView.reloadData()
     }
 
+    @IBOutlet weak var addEmergencyContactButton: UIBarButtonItem!
     @IBAction func addEmergencyContactButtonTapped(_ sender: Any) {
         let alertController = UIAlertController(title: "Add Emergency Contact", message: "Would you like to create or add an existing contact?", preferredStyle: .actionSheet)
 
@@ -92,10 +113,16 @@ class EmergencyListTableViewController: UITableViewController, CNContactPickerDe
             contactPicker.displayedPropertyKeys =
                 [CNContactGivenNameKey, CNContactPhoneNumbersKey]
             self.present(contactPicker, animated: true, completion: nil)
+            
         }
         
         alertController.addAction(addContact)
         alertController.addAction(addExistingContact)
+        
+        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
+            alertController.popoverPresentationController?.barButtonItem = self.addEmergencyContactButton
+            alertController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
+        }
         
         self.present(alertController, animated: true, completion: nil)
     }

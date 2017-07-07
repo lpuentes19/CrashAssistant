@@ -10,7 +10,7 @@ import UIKit
 
 class AccidentReportDetailTableViewController: UITableViewController, UITextFieldDelegate {
     
-    var accidentReport: Step3? {
+    var accidentReport:AccidentReports? {
         didSet {
             updateDetailAccidentReport()
         }
@@ -94,13 +94,11 @@ class AccidentReportDetailTableViewController: UITableViewController, UITextFiel
             let badgeNumber = badgeNumberTextField.text else { return }
         
         if let accidentReport = accidentReport {
-            Step3Controller.shared.update(accidentReport: accidentReport, name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate, officer: officer, badgeNumber: badgeNumber)
+            AccidentReportsController.shared.update(accidentReport: accidentReport, name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate, officer: officer, badgeNumber: badgeNumber)
         } else {
-            Step3Controller.shared.addAccidentReportWith(name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate, officer: officer, badgeNumber: badgeNumber)
+            AccidentReportsController.shared.addAccidentReportWith(name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate, officer: officer, badgeNumber: badgeNumber)
         }
-//        Step3Controller.shared.update(name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate)
-//        Step3Controller.shared.update(officer: officer, badgeNumber: badgeNumber)
-        
+
         performSegue(withIdentifier: "backToAccidentReport", sender: nil)
     }
 }

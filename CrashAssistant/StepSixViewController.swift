@@ -52,7 +52,7 @@ class StepSixViewController: UIViewController, UITextViewDelegate {
         
         guard let statement = statementTextView.text, !statement.isEmpty else { return }
         
-        Step3Controller.shared.update(statement: statement)
+        AccidentReportsController.shared.update(statement: statement)
         
         performSegue(withIdentifier: "toStep7", sender: nil)
     }

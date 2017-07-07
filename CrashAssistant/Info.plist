@@ -42,8 +42,10 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>This app requires access to the camera.</string>
+	<string>This feature requires access to the camera.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This app requires access to the Photo Library.</string>
+	<string>This feature requires access to the Photo Library.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>This feature requires access to your Contact List.</string>
 </dict>
 </plist>

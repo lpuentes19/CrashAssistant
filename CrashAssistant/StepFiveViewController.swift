@@ -37,7 +37,7 @@ class StepFiveViewController: UIViewController {
             let witness2Email = witness2EmailTextField.text,
             let witness2Phone = witness2PhoneTextField.text else { return }
         
-            Step3Controller.shared.update(witnessName: witnessName, witnessEmail: witnessEmail, witnessPhone: witnessPhone, witness2Name: witness2Name, witness2Email: witness2Email, witness2Phone: witness2Phone)
+            AccidentReportsController.shared.update(witnessName: witnessName, witnessEmail: witnessEmail, witnessPhone: witnessPhone, witness2Name: witness2Name, witness2Email: witness2Email, witness2Phone: witness2Phone)
         
         performSegue(withIdentifier: "toStep6", sender: nil)
     }

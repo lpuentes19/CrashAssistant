@@ -23,13 +23,13 @@ class AccidentReportsTableViewController: UITableViewController, AccidentReportT
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Step3Controller.shared.accidentReports.count
+        return AccidentReportsController.shared.accidentReports.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "accidentReportCell", for: indexPath) as? AccidentReportTableViewCell else { return UITableViewCell() }
         
-        let accidentReports = Step3Controller.shared.accidentReports[indexPath.row]
+        let accidentReports = AccidentReportsController.shared.accidentReports[indexPath.row]
         
         cell.updateAccidentReport(accidentReport: accidentReports)
         cell.delegate = self
@@ -39,8 +39,8 @@ class AccidentReportsTableViewController: UITableViewController, AccidentReportT
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let accidentReports = Step3Controller.shared.accidentReports[indexPath.row]
-            Step3Controller.shared.delete(accidentReport: accidentReports)
+            let accidentReports = AccidentReportsController.shared.accidentReports[indexPath.row]
+            AccidentReportsController.shared.delete(accidentReport: accidentReports)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -51,7 +51,7 @@ class AccidentReportsTableViewController: UITableViewController, AccidentReportT
         if segue.identifier == "toDetailVC" {
             guard let destinationVC = segue.destination as? AccidentReportDetailTableViewController,
                 let indexPath = tableView.indexPathForSelectedRow else { return }
-            destinationVC.accidentReport = Step3Controller.shared.accidentReports[indexPath.row]
+            destinationVC.accidentReport = AccidentReportsController.shared.accidentReports[indexPath.row]
         }
     }
     

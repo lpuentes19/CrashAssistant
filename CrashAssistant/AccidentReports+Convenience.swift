@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-extension Step3 {
+extension AccidentReports {
 
     @discardableResult convenience init(name: String, address: String, phone: String, email: String, insurance: String, makeAndModel: String, color: String, licensePlate: String, date: Date = Date(), statement: String? = nil, officer: String? = nil, badgeNumber: String? = nil, witnessName: String? = nil, witnessEmail: String? = nil, witnessPhone: String? = nil, witness2Name: String? = nil, witness2Email: String? = nil, witness2Phone: String? = nil, context: NSManagedObjectContext = CoreDataStack.context) {
         

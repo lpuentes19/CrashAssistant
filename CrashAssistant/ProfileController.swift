@@ -18,11 +18,11 @@ class ProfileController {
     }
     
     // Creating Profile
-    func createProfileWith(name: String, address: String, email: String, phone: String, insurance: String, policyNumber: String, emergencyContacts: String? = nil) {
+    func createProfileWith(name: String, address: String, email: String, phone: String, insurance: String, policyNumber: String) {
         
-        let _ = Profile(name: name, address: address, email: email, phone: phone, insurance: insurance, policyNumber: policyNumber, emergencyContacts: emergencyContacts)
+        let _ = Profile(name: name, address: address, email: email, phone: phone, insurance: insurance, policyNumber: policyNumber)
         
-        saveToPersistenceStorage()
+        saveToPersistentStorage()
     }
     
     // Updating Profile
@@ -35,13 +35,7 @@ class ProfileController {
         profile.insurance = insurance
         profile.policyNumber = policyNumber
         
-        saveToPersistenceStorage()
-    }
-    
-    func updateProfileWith(emergencyContacts: String) {
-        profile?.emergencyContacts = emergencyContacts
-        
-        saveToPersistenceStorage()
+        saveToPersistentStorage()
     }
     
     // Loading Profile data
@@ -52,7 +46,7 @@ class ProfileController {
     }
     
     // Saving Profile data
-    func saveToPersistenceStorage() {
+    func saveToPersistentStorage() {
        // (try? CoreDataStack.context.save())
         let moc = CoreDataStack.context
         

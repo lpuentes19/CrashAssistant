@@ -11,7 +11,7 @@ import CoreData
 
 extension Profile {
     
-    @discardableResult convenience init(name: String, address: String, email: String, phone: String, insurance: String, policyNumber: String, emergencyContacts: String? = nil, context: NSManagedObjectContext = CoreDataStack.context) {
+    @discardableResult convenience init(name: String, address: String, email: String, phone: String, insurance: String, policyNumber: String, context: NSManagedObjectContext = CoreDataStack.context) {
     
         self.init(context: context)
     
@@ -21,7 +21,6 @@ extension Profile {
         self.phone = phone
         self.insurance = insurance
         self.policyNumber = policyNumber
-        self.emergencyContacts = emergencyContacts
     }
 }
 

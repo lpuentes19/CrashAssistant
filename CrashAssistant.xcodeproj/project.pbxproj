@@ -25,10 +25,12 @@
 		955D03371F02C086007EE283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 955D03351F02C086007EE283 /* LaunchScreen.storyboard */; };
 		955D03401F02C55E007EE283 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955D033F1F02C55E007EE283 /* InitialViewController.swift */; };
 		955D03431F02CBA4007EE283 /* UIView+FadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955D03421F02CBA4007EE283 /* UIView+FadeAnimation.swift */; };
+		957FE9A61F0EFEF200628457 /* EmergencyContacts+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957FE9A51F0EFEF200628457 /* EmergencyContacts+Convenience.swift */; };
+		957FE9A81F0F00B200628457 /* EmergencyContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957FE9A71F0F00B200628457 /* EmergencyContactsController.swift */; };
 		95E872E01F05716900386BFE /* UINavigation+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E872DF1F05716900386BFE /* UINavigation+Pop.swift */; };
-		95EABDF01F06B94B0040BF33 /* Step3+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EABDEF1F06B94B0040BF33 /* Step3+Convenience.swift */; };
+		95EABDF01F06B94B0040BF33 /* AccidentReports+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EABDEF1F06B94B0040BF33 /* AccidentReports+Convenience.swift */; };
 		95EABDF21F06B9E60040BF33 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EABDF11F06B9E60040BF33 /* CoreDataStack.swift */; };
-		95EABDF41F06BB840040BF33 /* Step3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EABDF31F06BB840040BF33 /* Step3Controller.swift */; };
+		95EABDF41F06BB840040BF33 /* AccidentReportsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EABDF31F06BB840040BF33 /* AccidentReportsController.swift */; };
 		95EABDF71F0707580040BF33 /* Date+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EABDF61F0707580040BF33 /* Date+Conversion.swift */; };
 		95F174961F04434A00CF65AD /* AccidentReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F174951F04434A00CF65AD /* AccidentReportsTableViewController.swift */; };
 		95F174981F0443EB00CF65AD /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F174971F0443EB00CF65AD /* ProfileTableViewController.swift */; };
@@ -60,10 +62,12 @@
 		955D03381F02C086007EE283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		955D033F1F02C55E007EE283 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		955D03421F02CBA4007EE283 /* UIView+FadeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+FadeAnimation.swift"; sourceTree = "<group>"; };
+		957FE9A51F0EFEF200628457 /* EmergencyContacts+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EmergencyContacts+Convenience.swift"; sourceTree = "<group>"; };
+		957FE9A71F0F00B200628457 /* EmergencyContactsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContactsController.swift; sourceTree = "<group>"; };
 		95E872DF1F05716900386BFE /* UINavigation+Pop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigation+Pop.swift"; sourceTree = "<group>"; };
-		95EABDEF1F06B94B0040BF33 /* Step3+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Step3+Convenience.swift"; sourceTree = "<group>"; };
+		95EABDEF1F06B94B0040BF33 /* AccidentReports+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccidentReports+Convenience.swift"; sourceTree = "<group>"; };
 		95EABDF11F06B9E60040BF33 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		95EABDF31F06BB840040BF33 /* Step3Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step3Controller.swift; sourceTree = "<group>"; };
+		95EABDF31F06BB840040BF33 /* AccidentReportsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccidentReportsController.swift; sourceTree = "<group>"; };
 		95EABDF61F0707580040BF33 /* Date+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Conversion.swift"; sourceTree = "<group>"; };
 		95F174951F04434A00CF65AD /* AccidentReportsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccidentReportsTableViewController.swift; sourceTree = "<group>"; };
 		95F174971F0443EB00CF65AD /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -166,8 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				955D03301F02C086007EE283 /* CrashAssistant.xcdatamodeld */,
-				95EABDEF1F06B94B0040BF33 /* Step3+Convenience.swift */,
+				95EABDEF1F06B94B0040BF33 /* AccidentReports+Convenience.swift */,
 				951A39F31F0D3A9C000096D3 /* Profile+Convenience.swift */,
+				957FE9A51F0EFEF200628457 /* EmergencyContacts+Convenience.swift */,
 				95EABDF11F06B9E60040BF33 /* CoreDataStack.swift */,
 			);
 			name = Models;
@@ -176,8 +181,9 @@
 		95EABDF51F06BB930040BF33 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				95EABDF31F06BB840040BF33 /* Step3Controller.swift */,
+				95EABDF31F06BB840040BF33 /* AccidentReportsController.swift */,
 				951A39F51F0D3CFF000096D3 /* ProfileController.swift */,
+				957FE9A71F0F00B200628457 /* EmergencyContactsController.swift */,
 			);
 			name = ModelControllers;
 			sourceTree = "<group>";
@@ -278,7 +284,8 @@
 			files = (
 				95F174961F04434A00CF65AD /* AccidentReportsTableViewController.swift in Sources */,
 				951A39F41F0D3A9C000096D3 /* Profile+Convenience.swift in Sources */,
-				95EABDF41F06BB840040BF33 /* Step3Controller.swift in Sources */,
+				957FE9A81F0F00B200628457 /* EmergencyContactsController.swift in Sources */,
+				95EABDF41F06BB840040BF33 /* AccidentReportsController.swift in Sources */,
 				955D03401F02C55E007EE283 /* InitialViewController.swift in Sources */,
 				95E872E01F05716900386BFE /* UINavigation+Pop.swift in Sources */,
 				953D74671F041CC700BEDBBD /* StepOneViewController.swift in Sources */,
@@ -300,8 +307,9 @@
 				953D746B1F041D5800BEDBBD /* StepThreeViewController.swift in Sources */,
 				953D746F1F041D8100BEDBBD /* StepFiveViewController.swift in Sources */,
 				95F174AB1F044AB300CF65AD /* AccidentReportTableViewCell.swift in Sources */,
+				957FE9A61F0EFEF200628457 /* EmergencyContacts+Convenience.swift in Sources */,
 				953D74711F041DDB00BEDBBD /* StepSixViewController.swift in Sources */,
-				95EABDF01F06B94B0040BF33 /* Step3+Convenience.swift in Sources */,
+				95EABDF01F06B94B0040BF33 /* AccidentReports+Convenience.swift in Sources */,
 				953D74771F041E5D00BEDBBD /* FinishedStepsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

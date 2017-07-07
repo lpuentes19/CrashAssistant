@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Profile" representedClassName="Profile" syncable="YES" codeGenerationType="class">
-        <attribute name="address" attributeType="String" syncable="YES"/>
-        <attribute name="email" attributeType="String" syncable="YES"/>
-        <attribute name="emergencyContacts" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
-        <attribute name="insurance" attributeType="String" syncable="YES"/>
-        <attribute name="name" attributeType="String" syncable="YES"/>
-        <attribute name="phone" attributeType="String" syncable="YES"/>
-        <attribute name="policyNumber" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="Step3" representedClassName="Step3" syncable="YES" codeGenerationType="class">
+    <entity name="AccidentReports" representedClassName="AccidentReports" syncable="YES" codeGenerationType="class">
         <attribute name="address" attributeType="String" syncable="YES"/>
         <attribute name="badgeNumber" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
         <attribute name="color" attributeType="String" syncable="YES"/>
@@ -29,8 +20,21 @@
         <attribute name="witnessName" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
         <attribute name="witnessPhone" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
     </entity>
+    <entity name="EmergencyContacts" representedClassName="EmergencyContacts" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Profile" representedClassName="Profile" syncable="YES" codeGenerationType="class">
+        <attribute name="address" attributeType="String" syncable="YES"/>
+        <attribute name="email" attributeType="String" syncable="YES"/>
+        <attribute name="insurance" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="phone" attributeType="String" syncable="YES"/>
+        <attribute name="policyNumber" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Step3" positionX="-63" positionY="-18" width="128" height="315"/>
-        <element name="Profile" positionX="-63" positionY="117" width="128" height="150"/>
+        <element name="AccidentReports" positionX="-63" positionY="-18" width="128" height="315"/>
+        <element name="Profile" positionX="-63" positionY="117" width="128" height="135"/>
+        <element name="EmergencyContacts" positionX="-63" positionY="117" width="128" height="75"/>
     </elements>
 </model>

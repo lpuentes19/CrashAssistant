@@ -9,31 +9,31 @@
 import Foundation
 import CoreData
 
-class Step3Controller {
+class AccidentReportsController {
     
-    static let shared = Step3Controller()
+    static let shared = AccidentReportsController()
     
-    var step3: Step3?
-    var accidentReports: [Step3] {
+    var step3: AccidentReports?
+    var accidentReports: [AccidentReports] {
         return fetchAccidentReports()
     }
     
     func addAccidentReportWith(name: String, address: String, phone: String, email: String, insurance: String, makeAndModel: String, color: String, licensePlate: String, date: Date = Date(), statement: String? = nil, officer: String? = nil, badgeNumber: String? = nil, witnessName: String? = nil, witnessEmail: String? = nil, witnessPhone: String? = nil, witness2Name: String? = nil, witness2Email: String? = nil, witness2Phone: String? = nil) {
         
-         step3 = Step3(name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate, statement: statement, officer: officer, badgeNumber: badgeNumber, witnessName: witnessName, witnessEmail: witnessEmail, witnessPhone: witnessPhone, witness2Name: witness2Name, witness2Email: witness2Name, witness2Phone: witnessPhone)
+         step3 = AccidentReports(name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate, statement: statement, officer: officer, badgeNumber: badgeNumber, witnessName: witnessName, witnessEmail: witnessEmail, witnessPhone: witnessPhone, witness2Name: witness2Name, witness2Email: witness2Name, witness2Phone: witnessPhone)
         
         saveToPersistentStorage()
     }
     // This func is used to edit and save info on the detail Accident Reports VC
     func addAccidentReportWith(name: String, address: String, phone: String, email: String, insurance: String, makeAndModel: String, color: String, licensePlate: String, officer: String, badgeNumber: String) {
         
-        step3 = Step3(name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate, officer: officer, badgeNumber: badgeNumber)
+        step3 = AccidentReports(name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate, officer: officer, badgeNumber: badgeNumber)
         
         saveToPersistentStorage()
     }
     
-    // This func is used to edit and save info on the detail Accident Reports VC
-    func update(accidentReport: Step3, name: String, address: String, phone: String, email: String, insurance: String, makeAndModel: String, color: String, licensePlate: String, officer: String, badgeNumber: String) {
+    // This func is used to edit info on the detail Accident Reports VC
+    func update(accidentReport: AccidentReports, name: String, address: String, phone: String, email: String, insurance: String, makeAndModel: String, color: String, licensePlate: String, officer: String, badgeNumber: String) {
         accidentReport.name = name
         accidentReport.address = address
         accidentReport.phone = phone
@@ -48,7 +48,7 @@ class Step3Controller {
         saveToPersistentStorage()
     }
     
-    func update(accident: Step3, statement: String) {
+    func update(accident: AccidentReports, statement: String) {
         
         accident.statement = statement
         
@@ -80,7 +80,7 @@ class Step3Controller {
         saveToPersistentStorage()
     }
     // This func is used to edit and save info on the Witness VC
-    func update(accidentReport: Step3, witnessName: String, witnessEmail: String, witnessPhone: String, witness2Name: String, witness2Email: String, witness2Phone: String) {
+    func update(accidentReport: AccidentReports, witnessName: String, witnessEmail: String, witnessPhone: String, witness2Name: String, witness2Email: String, witness2Phone: String) {
         
         accidentReport.witnessName = witnessName
         accidentReport.witnessEmail = witnessEmail
@@ -92,20 +92,19 @@ class Step3Controller {
         saveToPersistentStorage()
     }
     
-    func delete(accidentReport: Step3) {
+    func delete(accidentReport: AccidentReports) {
         let moc = CoreDataStack.context
         moc.delete(accidentReport)
         
         saveToPersistentStorage()
     }
     
-    func fetchAccidentReports() -> [Step3] {
-        let request: NSFetchRequest<Step3> = Step3.fetchRequest()
+    func fetchAccidentReports() -> [AccidentReports] {
+        let request: NSFetchRequest<AccidentReports> = AccidentReports.fetchRequest()
         return(try? CoreDataStack.context.fetch(request)) ?? []
     }
     
     func saveToPersistentStorage() {
-        // (try? CoreDataStack.context.save())
         let moc = CoreDataStack.context
         
         do {

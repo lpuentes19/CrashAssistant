@@ -40,7 +40,7 @@ class StepThreeViewController: UIViewController {
             let color = colorTextField.text,
             let licensePlate = licensePlateTextField.text else { return }
         
-        Step3Controller.shared.addAccidentReportWith(name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate)
+        AccidentReportsController.shared.addAccidentReportWith(name: name, address: address, phone: phone, email: email, insurance: insurance, makeAndModel: makeAndModel, color: color, licensePlate: licensePlate)
         
         performSegue(withIdentifier: "toStep4", sender: nil)
     }

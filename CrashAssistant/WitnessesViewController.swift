@@ -10,7 +10,7 @@ import UIKit
 
 class WitnessesViewController: UIViewController {
     
-    var accidentReport: Step3? {
+    var accidentReport: AccidentReports? {
         didSet {
             if isViewLoaded {
                 updateWitnesses()
@@ -56,7 +56,7 @@ class WitnessesViewController: UIViewController {
             let witness2Phone = witness2PhoneTextField.text else { return }
 
         guard let accidentReport = accidentReport else { return }
-        Step3Controller.shared.update(accidentReport: accidentReport, witnessName: witnessName, witnessEmail: witnessEmail, witnessPhone: witnessPhone, witness2Name: witness2Name, witness2Email: witness2Email, witness2Phone: witness2Phone)
+        AccidentReportsController.shared.update(accidentReport: accidentReport, witnessName: witnessName, witnessEmail: witnessEmail, witnessPhone: witnessPhone, witness2Name: witness2Name, witness2Email: witness2Email, witness2Phone: witness2Phone)
         
         let notificationController = UIAlertController(title: "Saved", message: "Your witnesses have been successfully saved.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)

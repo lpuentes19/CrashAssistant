@@ -10,7 +10,7 @@ import UIKit
 
 class StatementViewController: UIViewController {
 
-    var accidentReport: Step3? {
+    var accidentReport: AccidentReports? {
         didSet {
             if isViewLoaded {
                 updateStatement()
@@ -51,7 +51,7 @@ class StatementViewController: UIViewController {
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let statement = statementTextView.text else { return }
         guard let accidentReport = accidentReport else { return }
-        Step3Controller.shared.update(accident: accidentReport, statement: statement)
+        AccidentReportsController.shared.update(accident: accidentReport, statement: statement)
         
         let notificationController = UIAlertController(title: "Saved", message: "Your statement has been successfully saved.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)

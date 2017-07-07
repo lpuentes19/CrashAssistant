@@ -28,7 +28,7 @@ class StepSevenViewController: UIViewController {
         guard let officer = officerNameTextField.text,
             let badgeNumber = badgeNumberTextField.text else { return }
         
-        Step3Controller.shared.update(officer: officer, badgeNumber: badgeNumber)
+        AccidentReportsController.shared.update(officer: officer, badgeNumber: badgeNumber)
         
         performSegue(withIdentifier: "toStep8", sender: nil)
     }

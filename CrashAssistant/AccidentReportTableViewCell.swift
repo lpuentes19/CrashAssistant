@@ -10,7 +10,7 @@ import UIKit
 
 class AccidentReportTableViewCell: UITableViewCell {
 
-    var step3: Step3?
+    var step3: AccidentReports?
     
     var delegate: AccidentReportTableViewCellDelegate?
     
@@ -21,7 +21,7 @@ class AccidentReportTableViewCell: UITableViewCell {
 }
 
 extension AccidentReportTableViewCell {
-    func updateAccidentReport(accidentReport: Step3) {
+    func updateAccidentReport(accidentReport: AccidentReports) {
     
         nameLabel.text = accidentReport.name
         makeAndModelLabel.text = accidentReport.makeAndModel

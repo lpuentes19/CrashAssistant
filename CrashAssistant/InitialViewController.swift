@@ -17,6 +17,11 @@ class InitialViewController: UIViewController {
         fadeAnimation()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        profileTextView.setContentOffset(CGPoint.zero, animated: false)
+    }
+    
     func setupButtons() {
         // Borders, rounded edges, adjusting text
         getStartedButton.layer.masksToBounds = true

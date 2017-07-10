@@ -73,10 +73,12 @@ class EmergencyListTableViewController: UITableViewController, CNContactPickerDe
 
     @IBOutlet weak var addEmergencyContactButton: UIBarButtonItem!
     @IBAction func addEmergencyContactButtonTapped(_ sender: Any) {
+        // Create Action Sheet Alert
         let alertController = UIAlertController(title: "Add Emergency Contact", message: "Would you like to create or add an existing contact?", preferredStyle: .actionSheet)
-
+        
+        // Add Contact Action
         let addContact = UIAlertAction(title: "Create Contact", style: .default) { (_) in
-            
+            // Create another Alert Controller within the add option action
             let addContactAlertController = UIAlertController(title: "Add Contact", message: "Please enter name and number.", preferredStyle: .alert)
             
             var contactTextField: UITextField?
@@ -106,7 +108,7 @@ class EmergencyListTableViewController: UITableViewController, CNContactPickerDe
             
             self.present(addContactAlertController, animated: true, completion: nil)
         }
-        
+        // Access the phones contact list to add an existing contact
         let addExistingContact = UIAlertAction(title: "Add Existing Contact", style: .default) { (_) in
             let contactPicker = CNContactPickerViewController()
             contactPicker.delegate = self
@@ -115,10 +117,14 @@ class EmergencyListTableViewController: UITableViewController, CNContactPickerDe
             self.present(contactPicker, animated: true, completion: nil)
             
         }
+        // Cancel action for the Action Sheet
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         alertController.addAction(addContact)
         alertController.addAction(addExistingContact)
+        alertController.addAction(cancelAction)
         
+        // If I ever decide to release this app for the iPad, this ensures the Alert Controllers are presented
         if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
             alertController.popoverPresentationController?.barButtonItem = self.addEmergencyContactButton
             alertController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up

@@ -30,8 +30,14 @@ class StepOneViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let callAction = UIAlertAction(title: "Call", style: .default) { (_) in
             guard let url = URL(string: "tel://911") else { return }
-            
-            UIApplication.shared.open(url)
+            if UIApplication.shared.canOpenURL(url) {
+               UIApplication.shared.open(url)
+            } else {
+                let alertController = UIAlertController(title: "Phone not available", message: "You have not given permission to use your Phone or there is no Phone available to use", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
         
         alertController.addAction(cancelAction)

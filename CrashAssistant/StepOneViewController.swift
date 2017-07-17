@@ -12,6 +12,7 @@ class StepOneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupButtons()
     }
     

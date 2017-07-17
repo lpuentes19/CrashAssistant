@@ -21,7 +21,8 @@ class StepFiveViewController: UIViewController {
     func dismissKeyboard() {
         view.endEditing(true)
     }
-
+    
+    // Thinking about making this a tableview
     @IBOutlet weak var witnessNameTextField: UITextField!
     @IBOutlet weak var witnessPhoneTextField: UITextField!
     @IBOutlet weak var witnessEmailTextField: UITextField!

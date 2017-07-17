@@ -12,7 +12,6 @@ class InitialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupButtons()
         fadeAnimation()
     }

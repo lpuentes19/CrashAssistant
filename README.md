@@ -6,7 +6,7 @@ An app that provides people with steps on what to do when they're involved in a 
 * Swift 
 * Core Data
 * Contacts UI
-* Alert Controllers(Alert/Action Sheet)
+* Alert Controllers (Alert/Action Sheet)
 * UIKIT
 * Core Animation
 * UIImagePickerController

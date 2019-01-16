@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		951A39F41F0D3A9C000096D3 /* Profile+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A39F31F0D3A9C000096D3 /* Profile+Convenience.swift */; };
 		951A39F61F0D3CFF000096D3 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A39F51F0D3CFF000096D3 /* ProfileController.swift */; };
+		951FC9D020C0EC99009F4495 /* Profile+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951FC9CF20C0EC99009F4495 /* Profile+Convenience.swift */; };
 		953D74671F041CC700BEDBBD /* StepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D74661F041CC700BEDBBD /* StepOneViewController.swift */; };
 		953D74691F041D4600BEDBBD /* StepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D74681F041D4600BEDBBD /* StepTwoViewController.swift */; };
 		953D746B1F041D5800BEDBBD /* StepThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D746A1F041D5800BEDBBD /* StepThreeViewController.swift */; };
@@ -42,8 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		951A39F31F0D3A9C000096D3 /* Profile+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Profile+Convenience.swift"; sourceTree = "<group>"; };
 		951A39F51F0D3CFF000096D3 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		951FC9CF20C0EC99009F4495 /* Profile+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Profile+Convenience.swift"; sourceTree = "<group>"; };
 		953D74661F041CC700BEDBBD /* StepOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepOneViewController.swift; sourceTree = "<group>"; };
 		953D74681F041D4600BEDBBD /* StepTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTwoViewController.swift; sourceTree = "<group>"; };
 		953D746A1F041D5800BEDBBD /* StepThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepThreeViewController.swift; sourceTree = "<group>"; };
@@ -170,8 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				955D03301F02C086007EE283 /* CrashAssistant.xcdatamodeld */,
+				951FC9CF20C0EC99009F4495 /* Profile+Convenience.swift */,
 				95EABDEF1F06B94B0040BF33 /* AccidentReports+Convenience.swift */,
-				951A39F31F0D3A9C000096D3 /* Profile+Convenience.swift */,
 				957FE9A51F0EFEF200628457 /* EmergencyContacts+Convenience.swift */,
 				95EABDF11F06B9E60040BF33 /* CoreDataStack.swift */,
 			);
@@ -283,10 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				95F174961F04434A00CF65AD /* AccidentReportsTableViewController.swift in Sources */,
-				951A39F41F0D3A9C000096D3 /* Profile+Convenience.swift in Sources */,
 				957FE9A81F0F00B200628457 /* EmergencyContactsController.swift in Sources */,
 				95EABDF41F06BB840040BF33 /* AccidentReportsController.swift in Sources */,
 				955D03401F02C55E007EE283 /* InitialViewController.swift in Sources */,
+				951FC9D020C0EC99009F4495 /* Profile+Convenience.swift in Sources */,
 				95E872E01F05716900386BFE /* UINavigation+Pop.swift in Sources */,
 				953D74671F041CC700BEDBBD /* StepOneViewController.swift in Sources */,
 				95F1749A1F04466D00CF65AD /* EmergencyListTableViewController.swift in Sources */,
@@ -377,12 +377,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -422,10 +423,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -437,6 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H9L7P6ZCN6;
 				INFOPLIST_FILE = CrashAssistant/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CrashAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -451,6 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H9L7P6ZCN6;
 				INFOPLIST_FILE = CrashAssistant/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CrashAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";

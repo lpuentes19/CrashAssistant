@@ -10,55 +10,38 @@ import UIKit
 
 class InitialViewController: UIViewController {
 
+    @IBOutlet weak var getStartedButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var backgroundView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupButtons()
+        setupUI()
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { (_) in
+            self.fadeAnimation()
+        }
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         fadeAnimation()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        profileTextView.setContentOffset(CGPoint.zero, animated: false)
-    }
-    
-    func setupButtons() {
+    func setupUI() {
         // Borders, rounded edges, adjusting text
         getStartedButton.layer.masksToBounds = true
         getStartedButton.layer.cornerRadius = 5
         getStartedButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        getStartedButton.layer.borderWidth = 2
-        getStartedButton.layer.borderColor = UIColor.black.cgColor
         
-        profileButton.layer.masksToBounds = true
-        profileButton.layer.cornerRadius = 5
-        profileButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        profileButton.layer.borderWidth = 2
-        profileButton.layer.borderColor = UIColor.black.cgColor
+        backgroundView.layer.masksToBounds = true
+        backgroundView.layer.cornerRadius = 50
+        
     }
     
     func fadeAnimation() {
         // Fade Animation
         getStartedButton.fadeOut()
         getStartedButton.fadeIn()
-        profileButton.fadeOut()
-        profileButton.fadeIn()
-        carCrashImage.fadeOut()
-        carCrashImage.fadeIn()
-        folderImage.fadeOut()
-        folderImage.fadeIn()
-        accidentTextView.fadeOut()
-        accidentTextView.fadeIn()
-        profileTextView.fadeOut()
-        profileTextView.fadeIn()
-        titleLabel.fadeOut()
-        titleLabel.fadeIn()
     }
-    
-    @IBOutlet weak var getStartedButton: UIButton!
-    @IBOutlet weak var profileButton: UIButton!
-    @IBOutlet weak var carCrashImage: UIImageView!
-    @IBOutlet weak var folderImage: UIImageView!
-    @IBOutlet weak var accidentTextView: UITextView!
-    @IBOutlet weak var profileTextView: UITextView!
-    @IBOutlet weak var titleLabel: UILabel!
 }

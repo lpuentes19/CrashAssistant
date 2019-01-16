@@ -21,37 +21,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9a-2x-RSQ">
-                                <rect key="frame" x="142" y="351" width="129" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
-                                <state key="normal" title="Let's Get Started">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="rRc-BR-RoC" kind="show" id="fAl-eb-578"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Crash Assistant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rp-ko-C13">
-                                <rect key="frame" x="101" y="170" width="211.33333333333337" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crash Assistant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rp-ko-C13">
+                                <rect key="frame" x="80" y="169" width="254" height="37"/>
                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0L-DA-QEi">
+                                <rect key="frame" x="50" y="306" width="314" height="181"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Need to create a report?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vP-7F-AdU">
+                                        <rect key="frame" x="52.666666666666686" y="25" width="209" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONh-AG-uhD">
+                                        <rect key="frame" x="54" y="115" width="206" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Let's get started">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="rRc-BR-RoC" kind="show" id="A9U-kU-5QM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.22703838832487311" green="0.22703838832487311" blue="0.22703838832487311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="1vP-7F-AdU" firstAttribute="top" secondItem="C0L-DA-QEi" secondAttribute="top" constant="25" id="1kT-zl-TO7"/>
+                                    <constraint firstAttribute="trailing" secondItem="ONh-AG-uhD" secondAttribute="trailing" constant="54" id="7ZK-9W-Tto"/>
+                                    <constraint firstAttribute="bottom" secondItem="ONh-AG-uhD" secondAttribute="bottom" constant="30" id="Byx-LP-D0v"/>
+                                    <constraint firstAttribute="trailing" secondItem="1vP-7F-AdU" secondAttribute="trailing" constant="52.333333333333314" id="Xla-9G-Q2W"/>
+                                    <constraint firstItem="ONh-AG-uhD" firstAttribute="leading" secondItem="C0L-DA-QEi" secondAttribute="leading" constant="54" id="j00-SF-Cup"/>
+                                    <constraint firstItem="1vP-7F-AdU" firstAttribute="leading" secondItem="C0L-DA-QEi" secondAttribute="leading" constant="52.666666666666686" id="mh0-AG-COa"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.54420139654325983" green="0.86689752138899467" blue="0.86870837181352722" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.67387824835522825" green="0.86952859163284302" blue="0.86081247123592175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0Rp-ko-C13" secondAttribute="trailing" constant="80" id="0wy-FI-4qG"/>
+                            <constraint firstItem="C0L-DA-QEi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="1em-ZN-wW1"/>
+                            <constraint firstItem="0Rp-ko-C13" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="80" id="2Qc-IF-woe"/>
+                            <constraint firstAttribute="trailing" secondItem="C0L-DA-QEi" secondAttribute="trailing" constant="50" id="3R3-hF-3ge"/>
+                            <constraint firstItem="C0L-DA-QEi" firstAttribute="top" secondItem="0Rp-ko-C13" secondAttribute="bottom" constant="100" id="FcP-LS-ee0"/>
+                            <constraint firstItem="0Rp-ko-C13" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="105" id="H4H-hz-2fK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="C0L-DA-QEi" secondAttribute="bottom" constant="200" id="JRp-1N-peX"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Accident" id="OVZ-Ga-V8i"/>
                     <navigationItem key="navigationItem" id="q1u-s8-tVW"/>
                     <connections>
-                        <outlet property="getStartedButton" destination="R9a-2x-RSQ" id="qUS-Jn-1Ff"/>
+                        <outlet property="backgroundView" destination="C0L-DA-QEi" id="0AR-Yq-KaK"/>
+                        <outlet property="getStartedButton" destination="ONh-AG-uhD" id="rkn-gS-zy1"/>
                         <outlet property="titleLabel" destination="0Rp-ko-C13" id="KNP-uP-j7w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="191" y="867"/>
+            <point key="canvasLocation" x="189.85507246376812" y="866.57608695652186"/>
         </scene>
         <!--Reports-->
         <scene sceneID="kiG-cd-9zq">
@@ -892,7 +920,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.54567831754684448" green="0.86619848012924194" blue="0.86952859163284302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.67303907871246338" green="0.86981105804443359" blue="0.86253398656845093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="irj-MX-oqG" firstAttribute="top" secondItem="EVO-mT-zjj" secondAttribute="bottom" constant="8" id="6e4-Sw-oUN"/>
                             <constraint firstItem="PAn-Kx-prR" firstAttribute="leading" secondItem="35E-aR-8lJ" secondAttribute="leading" constant="16" id="Exa-hu-F28"/>
@@ -972,7 +1000,7 @@ authorities yet, it’s now time to do so. You want to make sure a police report
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.54567831754684448" green="0.86619848012924194" blue="0.86952859163284302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.67303907871246338" green="0.86981105804443359" blue="0.86253398656845093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="g1R-Ny-beU" firstAttribute="top" secondItem="7Bj-zW-eyv" secondAttribute="bottom" constant="111" id="5is-iB-DYO"/>
                             <constraint firstItem="w2P-Y4-C2r" firstAttribute="top" secondItem="8p1-CX-vgR" secondAttribute="bottom" constant="8" id="AFg-qJ-8hs"/>
@@ -1132,7 +1160,7 @@ authorities yet, it’s now time to do so. You want to make sure a police report
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.54567617177963257" green="0.86271399259567261" blue="0.86604553461074829" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.66936540603637695" green="0.86632651090621948" blue="0.85904562473297119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eeY-KT-ViY" firstAttribute="top" secondItem="IN5-jL-0s0" secondAttribute="bottom" constant="8" id="3eh-Dr-9wc"/>
                             <constraint firstItem="CqU-1F-DBv" firstAttribute="bottom" secondItem="nn1-P2-9QY" secondAttribute="bottom" id="4DK-OK-Bqm"/>
@@ -1269,7 +1297,7 @@ authorities yet, it’s now time to do so. You want to make sure a police report
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.54567831754684448" green="0.86619848012924194" blue="0.86952859163284302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.66936540603637695" green="0.86632651090621948" blue="0.85904562473297119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TGV-5Y-R0D" firstAttribute="leading" secondItem="5zH-RD-e5e" secondAttribute="leading" constant="119" id="1y1-VY-jHM"/>
                             <constraint firstAttribute="trailing" secondItem="S9z-OY-Ig3" secondAttribute="trailing" constant="16" id="JjO-wp-MFW"/>
@@ -1426,7 +1454,7 @@ authorities yet, it’s now time to do so. You want to make sure a police report
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.54567831754684448" green="0.86619848012924194" blue="0.86952859163284302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.66936540603637695" green="0.86632651090621948" blue="0.85904562473297119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ny6-9N-LoN" secondAttribute="trailing" constant="151" id="1fn-TB-6Bs"/>
                             <constraint firstItem="HII-qN-XDp" firstAttribute="top" secondItem="czu-e3-AjH" secondAttribute="bottom" constant="8" id="4pg-ma-klK"/>
@@ -1546,7 +1574,7 @@ authorities yet, it’s now time to do so. You want to make sure a police report
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.54567617177963257" green="0.86271399259567261" blue="0.86604553461074829" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.66936540603637695" green="0.86632651090621948" blue="0.85904562473297119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="l3z-Ox-Lfd" firstAttribute="top" secondItem="bjn-4Q-UmM" secondAttribute="bottom" constant="8" id="Dui-Ht-tgg"/>
                             <constraint firstAttribute="trailing" secondItem="Lvs-jw-Iae" secondAttribute="trailing" constant="124" id="EM3-lc-k6d"/>
@@ -1635,7 +1663,7 @@ authorities yet, it’s now time to do so. You want to make sure a police report
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.54567617177963257" green="0.86271399259567261" blue="0.86604553461074829" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.66936540603637695" green="0.86632651090621948" blue="0.85904562473297119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ubz-RN-mTb" firstAttribute="centerY" secondItem="CbL-qH-npw" secondAttribute="centerY" id="4ol-94-zuB"/>
                             <constraint firstItem="ZeG-nT-z8G" firstAttribute="trailing" secondItem="x7e-PU-GDp" secondAttribute="trailing" id="63z-Bf-sXp"/>
@@ -1712,7 +1740,7 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.54567617177963257" green="0.86271399259567261" blue="0.86604553461074829" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.66936540603637695" green="0.86632651090621948" blue="0.85904562473297119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Ahj-Cd-Py8" secondAttribute="trailing" constant="124" id="1Xj-F6-AAS"/>
                             <constraint firstItem="Ahj-Cd-Py8" firstAttribute="leading" secondItem="tq3-pF-fLc" secondAttribute="leading" constant="123" id="8rp-j3-pqa"/>
@@ -1835,7 +1863,7 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.54567831754684448" green="0.86619848012924194" blue="0.86952859163284302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.66936540603637695" green="0.86632651090621948" blue="0.85904562473297119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5Wf-Qe-cqX" firstAttribute="leading" secondItem="F5v-7B-cpN" secondAttribute="leading" id="0XD-AM-8j4"/>
                             <constraint firstItem="F5v-7B-cpN" firstAttribute="top" secondItem="E7a-oY-rqx" secondAttribute="top" id="0ZQ-Pb-HNa"/>
@@ -1929,7 +1957,7 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.54567831754684448" green="0.86619848012924194" blue="0.86952859163284302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.66936540603637695" green="0.86632651090621948" blue="0.85904562473297119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SiV-b1-Iv3" firstAttribute="top" secondItem="2VY-MG-Tky" secondAttribute="bottom" constant="35" id="8UC-u2-PSo"/>
                             <constraint firstItem="R13-6p-9UE" firstAttribute="top" secondItem="SiV-b1-Iv3" secondAttribute="bottom" constant="48" id="Fp0-RJ-kJE"/>
@@ -2003,7 +2031,7 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.54567831754684448" green="0.86619848012924194" blue="0.86952859163284302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.66936540603637695" green="0.86632651090621948" blue="0.85904562473297119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VLj-lc-fok" secondAttribute="trailing" constant="159" id="4Ff-SQ-Nx8"/>
                             <constraint firstAttribute="trailing" secondItem="9wH-cw-wCA" secondAttribute="trailing" constant="121" id="FVN-cU-ndd"/>
@@ -2057,9 +2085,9 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="x3w-Vp-lcP" kind="relationship" relationship="viewControllers" id="y7J-O6-QxZ"/>
                         <segue destination="FTz-B4-ria" kind="relationship" relationship="viewControllers" id="HOX-fA-tLk"/>
-                        <segue destination="Cdk-Zw-9Sk" kind="relationship" relationship="viewControllers" id="nqH-hM-qYN"/>
+                        <segue destination="x3w-Vp-lcP" kind="relationship" relationship="viewControllers" id="jAX-ZJ-KFU"/>
+                        <segue destination="Cdk-Zw-9Sk" kind="relationship" relationship="viewControllers" id="Vla-d1-49t"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Axr-ms-HLc" userLabel="First Responder" sceneMemberID="firstResponder"/>

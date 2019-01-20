@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		951A39F61F0D3CFF000096D3 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951A39F51F0D3CFF000096D3 /* ProfileController.swift */; };
+		951FA15B21F3B89E00427A24 /* CarDriving.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 951FA15A21F3B89E00427A24 /* CarDriving.mp4 */; };
 		951FC9D020C0EC99009F4495 /* Profile+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951FC9CF20C0EC99009F4495 /* Profile+Convenience.swift */; };
 		953D74671F041CC700BEDBBD /* StepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D74661F041CC700BEDBBD /* StepOneViewController.swift */; };
 		953D74691F041D4600BEDBBD /* StepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D74681F041D4600BEDBBD /* StepTwoViewController.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		951A39F51F0D3CFF000096D3 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		951FA15A21F3B89E00427A24 /* CarDriving.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = CarDriving.mp4; sourceTree = "<group>"; };
 		951FC9CF20C0EC99009F4495 /* Profile+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Profile+Convenience.swift"; sourceTree = "<group>"; };
 		953D74661F041CC700BEDBBD /* StepOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepOneViewController.swift; sourceTree = "<group>"; };
 		953D74681F041D4600BEDBBD /* StepTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTwoViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		955D03281F02C086007EE283 /* CrashAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				951FA15A21F3B89E00427A24 /* CarDriving.mp4 */,
 				955D032D1F02C086007EE283 /* Main.storyboard */,
 				955D03411F02C5A4007EE283 /* ViewControllers */,
 				95EABDF51F06BB930040BF33 /* ModelControllers */,
@@ -271,6 +274,7 @@
 			files = (
 				955D03371F02C086007EE283 /* LaunchScreen.storyboard in Resources */,
 				955D03341F02C086007EE283 /* Assets.xcassets in Resources */,
+				951FA15B21F3B89E00427A24 /* CarDriving.mp4 in Resources */,
 				955D032F1F02C086007EE283 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,6 +16,12 @@ class StepOneViewController: UIViewController {
         setupButtons()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = false
+    }
+    
     func setupButtons() {
         call911Button.layer.borderWidth = 2
         call911Button.layer.borderColor = UIColor.black.cgColor

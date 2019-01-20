@@ -54,7 +54,7 @@ class InitialViewController: UIViewController {
         getStartedButton.layer.cornerRadius = 5
         getStartedButton.titleLabel?.adjustsFontSizeToFitWidth = true
         getStartedButton.layer.borderWidth = 1
-        getStartedButton.layer.borderColor = UIColor.red.cgColor
+        getStartedButton.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     func fadeAnimation() {

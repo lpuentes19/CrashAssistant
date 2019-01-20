@@ -32,6 +32,7 @@ class InitialViewController: UIViewController {
         super.viewWillAppear(animated)
         fadeAnimation()
         navigationController?.navigationBar.isHidden = true
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,7 +54,7 @@ class InitialViewController: UIViewController {
         getStartedButton.layer.cornerRadius = 5
         getStartedButton.titleLabel?.adjustsFontSizeToFitWidth = true
         getStartedButton.layer.borderWidth = 1
-        getStartedButton.layer.borderColor = UIColor.yellow.cgColor
+        getStartedButton.layer.borderColor = UIColor.red.cgColor
     }
     
     func fadeAnimation() {

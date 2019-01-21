@@ -75,6 +75,12 @@ class ProfileTableViewController: UITableViewController, UITextFieldDelegate {
         } else {
             ProfileController.shared.createProfileWith(name: name, address: address, email: email, phone: phone, insurance: insurance, policyNumber: policyNumber)
         }
-        performSegue(withIdentifier: "backToAccidentReports", sender: nil)
+        
+        let notificationController = UIAlertController(title: "Saved", message: "Your information have been successfully saved.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        
+        notificationController.addAction(okAction)
+        
+        self.present(notificationController, animated: true, completion: nil)
     }
 }

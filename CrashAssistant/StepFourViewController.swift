@@ -16,8 +16,8 @@ class StepFourViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     func setupUI() {
-        sharePhotosButton.layer.borderWidth = 2
-        sharePhotosButton.layer.borderColor = UIColor.black.cgColor
+        sharePhotosButton.layer.borderWidth = 1
+        sharePhotosButton.layer.borderColor = UIColor.lightGray.cgColor
         sharePhotosButton.layer.masksToBounds = true
         sharePhotosButton.layer.cornerRadius = 5
         

@@ -12,14 +12,19 @@ class StepFourViewController: UIViewController, UIImagePickerControllerDelegate,
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupButton()
+        setupUI()
     }
     
-    func setupButton() {
+    func setupUI() {
         sharePhotosButton.layer.borderWidth = 2
         sharePhotosButton.layer.borderColor = UIColor.black.cgColor
         sharePhotosButton.layer.masksToBounds = true
         sharePhotosButton.layer.cornerRadius = 5
+        
+        instructionsTextView.layer.borderWidth = 1
+        instructionsTextView.layer.borderColor = UIColor.lightGray.cgColor
+        instructionsTextView.layer.cornerRadius = 10
+        instructionsTextView.layer.masksToBounds = true
     }
     
     // Gaining access to the camera and photo library
@@ -86,6 +91,7 @@ class StepFourViewController: UIViewController, UIImagePickerControllerDelegate,
         }
     }
     
+    @IBOutlet weak var instructionsTextView: UITextView!
     @IBOutlet weak var accidentImageView: UIImageView!
     @IBOutlet weak var sharePhotosButton: UIButton!
     // Implementing the sharing feature

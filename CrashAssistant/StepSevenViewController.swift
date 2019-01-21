@@ -13,14 +13,23 @@ class StepSevenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(StepSevenViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+    }
+    
+    func setupUI() {
+        instructionsTextView.layer.borderWidth = 1
+        instructionsTextView.layer.borderColor = UIColor.lightGray.cgColor
+        instructionsTextView.layer.cornerRadius = 10
+        instructionsTextView.layer.masksToBounds = true
     }
 
     func dismissKeyboard() {
         view.endEditing(true)
     }
     
+    @IBOutlet weak var instructionsTextView: UITextView!
     @IBOutlet weak var officerNameTextField: UITextField!
     @IBOutlet weak var badgeNumberTextField: UITextField!
     @IBAction func nextButtonTapped(_ sender: Any) {

@@ -12,21 +12,26 @@ class StepSixViewController: UIViewController, UITextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTextField()
+        setupUI()
         statementTextView.delegate = self
-        
+        setupUI()
         //Tap Gesture to dismiss the keyboard for the user
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(StepSixViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
 
-    func setupTextField() {
+    func setupUI() {
         statementTextView.layer.borderWidth = 1
-        statementTextView.layer.borderColor = UIColor.black.cgColor
+        statementTextView.layer.borderColor = UIColor.lightGray.cgColor
         statementTextView.layer.masksToBounds = true
         statementTextView.layer.cornerRadius = 5
         statementTextView.text = "Enter your statement here..."
         statementTextView.textColor = .lightGray
+        
+        instructionsTextView.layer.borderWidth = 1
+        instructionsTextView.layer.borderColor = UIColor.lightGray.cgColor
+        instructionsTextView.layer.cornerRadius = 10
+        instructionsTextView.layer.masksToBounds = true
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -47,6 +52,7 @@ class StepSixViewController: UIViewController, UITextViewDelegate {
         statementTextView.resignFirstResponder()
     }
 
+    @IBOutlet weak var instructionsTextView: UITextView!
     @IBOutlet weak var statementTextView: UITextView!
     @IBAction func nextButtonTapped(_ sender: Any) {
         

@@ -7,58 +7,83 @@
 //
 
 import UIKit
+import AVFoundation
 
 class InitialViewController: UIViewController {
 
+    @IBOutlet weak var getStartedButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var backgroundView: UIView!
+    
+    var avPlayer: AVPlayer!
+    var avPlayerLayer: AVPlayerLayer!
+    var paused: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupButtons()
-        fadeAnimation()
+        setupUI()
+        playVideo()
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { (_) in
+            self.fadeAnimation()
+        }
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        profileTextView.setContentOffset(CGPoint.zero, animated: false)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
     }
     
-    func setupButtons() {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        avPlayer.play()
+        paused = false
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        avPlayer.pause()
+        paused = true
+    }
+    func setupUI() {
         // Borders, rounded edges, adjusting text
         getStartedButton.layer.masksToBounds = true
         getStartedButton.layer.cornerRadius = 5
         getStartedButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        getStartedButton.layer.borderWidth = 2
-        getStartedButton.layer.borderColor = UIColor.black.cgColor
-        
-        profileButton.layer.masksToBounds = true
-        profileButton.layer.cornerRadius = 5
-        profileButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        profileButton.layer.borderWidth = 2
-        profileButton.layer.borderColor = UIColor.black.cgColor
+        getStartedButton.layer.borderWidth = 1
+        getStartedButton.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     func fadeAnimation() {
         // Fade Animation
         getStartedButton.fadeOut()
         getStartedButton.fadeIn()
-        profileButton.fadeOut()
-        profileButton.fadeIn()
-        carCrashImage.fadeOut()
-        carCrashImage.fadeIn()
-        folderImage.fadeOut()
-        folderImage.fadeIn()
-        accidentTextView.fadeOut()
-        accidentTextView.fadeIn()
-        profileTextView.fadeOut()
-        profileTextView.fadeIn()
-        titleLabel.fadeOut()
-        titleLabel.fadeIn()
     }
     
-    @IBOutlet weak var getStartedButton: UIButton!
-    @IBOutlet weak var profileButton: UIButton!
-    @IBOutlet weak var carCrashImage: UIImageView!
-    @IBOutlet weak var folderImage: UIImageView!
-    @IBOutlet weak var accidentTextView: UITextView!
-    @IBOutlet weak var profileTextView: UITextView!
-    @IBOutlet weak var titleLabel: UILabel!
+    func playVideo() {
+        let theURL = Bundle.main.url(forResource:"CarDriving", withExtension: "mp4")
+        
+        avPlayer = AVPlayer(url: theURL!)
+        avPlayerLayer = AVPlayerLayer(player: avPlayer)
+        avPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        avPlayer.volume = 0
+        avPlayer.actionAtItemEnd = .none
+        
+        avPlayerLayer.frame = view.layer.bounds
+        view.backgroundColor = .clear
+        view.layer.insertSublayer(avPlayerLayer, at: 0)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(playerItemDidReachEnd(notification:)),
+                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+                                               object: avPlayer.currentItem)
+    }
+    
+    @objc func playerItemDidReachEnd(notification: Notification) {
+        let p: AVPlayerItem = notification.object as! AVPlayerItem
+        p.seek(to: kCMTimeZero) { (finished) in
+            
+        }
+    }
 }

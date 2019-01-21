@@ -10,22 +10,27 @@ import UIKit
 
 class FinishedStepsViewController: UIViewController {
 
+    @IBOutlet weak var instructionsTextView: UITextView!
+    @IBOutlet weak var doneButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupButtons()
+        setupUI()
     }
 
-    func setupButtons() {
-        doneButton.layer.borderWidth = 2
-        doneButton.layer.borderColor = UIColor.black.cgColor
+    func setupUI() {
+        doneButton.layer.borderWidth = 1
+        doneButton.layer.borderColor = UIColor.lightGray.cgColor
         doneButton.layer.masksToBounds = true
         doneButton.layer.cornerRadius = 5
-    }
-    
-    @IBOutlet weak var doneButton: UIButton!
-    @IBAction func doneButtonTapped(_ sender: Any) {
-        guard let initialViewController = self.storyboard?.instantiateViewController(withIdentifier: "homeScreen") as? InitialViewController else { return }
         
-        self.navigationController?.pushViewController(initialViewController, animated: true)
+        instructionsTextView.layer.borderWidth = 1
+        instructionsTextView.layer.borderColor = UIColor.lightGray.cgColor
+        instructionsTextView.layer.cornerRadius = 10
+        instructionsTextView.layer.masksToBounds = true
+    }
+
+    @IBAction func doneButtonTapped(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }

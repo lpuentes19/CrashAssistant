@@ -21,18 +21,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.75" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0L-DA-QEi">
+                            <view alpha="0.5" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0L-DA-QEi">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Need to create an accident report?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vP-7F-AdU">
-                                        <rect key="frame" x="81.666666666666686" y="400.33333333333331" width="251" height="57.666666666666686"/>
+                                        <rect key="frame" x="81.666666666666686" y="403.33333333333331" width="251" height="57.666666666666686"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONh-AG-uhD">
-                                        <rect key="frame" x="104" y="540" width="206" height="43"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                        <rect key="frame" x="104" y="543" width="206" height="40"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                         <state key="normal" title="Let's get started">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
@@ -474,7 +474,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Badge Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeD-tf-MXg">
-                                                    <rect key="frame" x="8" y="8" width="137" height="28"/>
+                                                    <rect key="frame" x="8" y="7.6666666666666661" width="137" height="28.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="137" id="AcV-vK-xy2"/>
                                                     </constraints>
@@ -483,7 +483,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="krK-ff-IiL">
-                                                    <rect key="frame" x="150" y="7" width="244" height="30"/>
+                                                    <rect key="frame" x="150" y="6.6666666666666661" width="244" height="30.333333333333336"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -913,7 +913,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSl-gx-Uxy">
                                 <rect key="frame" x="148" y="515" width="117" height="36"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                <state key="normal" title="Call 911">
+                                <state key="normal" title="Dial 911">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -947,6 +947,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="call911Button" destination="sSl-gx-Uxy" id="ooA-vK-8VX"/>
+                        <outlet property="instructionsTextView" destination="PAn-Kx-prR" id="lhU-7x-0x0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hf-Vt-Wod" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -988,7 +989,7 @@ authorities yet, it’s now time to do so. You want to make sure a police report
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1R-Ny-beU">
                                 <rect key="frame" x="149" y="557" width="116" height="36"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                <state key="normal" title="Call 911">
+                                <state key="normal" title="Dial 911">
                                     <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -1022,6 +1023,7 @@ authorities yet, it’s now time to do so. You want to make sure a police report
                     </navigationItem>
                     <connections>
                         <outlet property="call911Button" destination="g1R-Ny-beU" id="PrE-2A-z9T"/>
+                        <outlet property="instructionsTextView" destination="7Bj-zW-eyv" id="u7M-zS-sip"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXL-IL-DQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1230,6 +1232,7 @@ authorities yet, it’s now time to do so. You want to make sure a police report
                         <outlet property="addressTextField" destination="jkt-cN-vIV" id="jK2-cd-ALL"/>
                         <outlet property="colorTextField" destination="YSe-jN-lVu" id="MZW-KY-f8O"/>
                         <outlet property="emailTextField" destination="nn1-P2-9QY" id="rt3-Yg-eVl"/>
+                        <outlet property="instructionsTextView" destination="PQK-Qf-GnG" id="LxB-4n-7k7"/>
                         <outlet property="insuranceTextField" destination="hU1-cW-dfL" id="uWi-hr-iCi"/>
                         <outlet property="licensePlateTextField" destination="bYn-cK-K5N" id="N4T-hj-ZXW"/>
                         <outlet property="makeModelTextField" destination="xef-o9-CeU" id="2ZU-HX-ahk"/>
@@ -1324,6 +1327,7 @@ authorities yet, it’s now time to do so. You want to make sure a police report
                     </navigationItem>
                     <connections>
                         <outlet property="accidentImageView" destination="KBD-mg-MlP" id="vaM-sX-JYh"/>
+                        <outlet property="instructionsTextView" destination="S9z-OY-Ig3" id="HcW-rU-GJ1"/>
                         <outlet property="sharePhotosButton" destination="TGV-5Y-R0D" id="pIN-yV-fti"/>
                     </connections>
                 </viewController>
@@ -1519,6 +1523,7 @@ authorities yet, it’s now time to do so. You want to make sure a police report
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="instructionsTextView" destination="r9V-Pl-Jn5" id="Dxl-CP-gm7"/>
                         <outlet property="witness2EmailTextField" destination="Bgf-Ih-A84" id="GVE-fk-erL"/>
                         <outlet property="witness2NameTextField" destination="jnF-n6-qUs" id="fzT-iz-a2v"/>
                         <outlet property="witness2PhoneTextField" destination="7aO-OO-PsU" id="lUP-1V-nH4"/>
@@ -1599,6 +1604,7 @@ authorities yet, it’s now time to do so. You want to make sure a police report
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="instructionsTextView" destination="bjn-4Q-UmM" id="OeZ-DG-itL"/>
                         <outlet property="statementTextView" destination="l3z-Ox-Lfd" id="y9K-Nv-tV7"/>
                         <segue destination="0UQ-wn-yzb" kind="show" identifier="toStep7" id="F03-Ti-1GE"/>
                     </connections>
@@ -1699,6 +1705,7 @@ authorities yet, it’s now time to do so. You want to make sure a police report
                     </navigationItem>
                     <connections>
                         <outlet property="badgeNumberTextField" destination="x7e-PU-GDp" id="2Za-Si-6nO"/>
+                        <outlet property="instructionsTextView" destination="ubz-RN-mTb" id="d0Q-on-etF"/>
                         <outlet property="officerNameTextField" destination="ZeG-nT-z8G" id="tMG-vb-8Om"/>
                         <segue destination="MTD-bP-YzM" kind="show" identifier="toStep8" id="neq-0S-Z5l"/>
                     </connections>
@@ -1763,6 +1770,9 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="instructionsTextView" destination="9Qh-Z1-uOY" id="Dxw-hl-QEV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wxz-tv-acB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2054,6 +2064,7 @@ witnesses reports come in handy. Feel to share that information with them. Pleas
                     </view>
                     <connections>
                         <outlet property="doneButton" destination="VLj-lc-fok" id="p34-ig-bgb"/>
+                        <outlet property="instructionsTextView" destination="0Wi-Ow-BXG" id="yrN-r2-NH6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZI9-Fe-YFY" userLabel="First Responder" sceneMemberID="firstResponder"/>

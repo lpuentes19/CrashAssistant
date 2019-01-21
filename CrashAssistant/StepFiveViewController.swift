@@ -14,6 +14,7 @@ class StepFiveViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(StepFiveViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
@@ -22,7 +23,15 @@ class StepFiveViewController: UIViewController {
         view.endEditing(true)
     }
     
+    func setupUI() {
+        instructionsTextView.layer.borderWidth = 1
+        instructionsTextView.layer.borderColor = UIColor.lightGray.cgColor
+        instructionsTextView.layer.cornerRadius = 10
+        instructionsTextView.layer.masksToBounds = true
+    }
+    
     // Thinking about making this a tableview
+    @IBOutlet weak var instructionsTextView: UITextView!
     @IBOutlet weak var witnessNameTextField: UITextField!
     @IBOutlet weak var witnessPhoneTextField: UITextField!
     @IBOutlet weak var witnessEmailTextField: UITextField!

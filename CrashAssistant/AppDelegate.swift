@@ -20,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().backgroundColor = .white
         UITabBar.appearance().tintColor = .white
         
+        if let tabBarController = window?.rootViewController as? UITabBarController {
+            tabBarController.selectedIndex = 1
+        }
+        
         return true
     }
 

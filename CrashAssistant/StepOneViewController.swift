@@ -13,7 +13,7 @@ class StepOneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupButtons()
+        setupUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -22,13 +22,19 @@ class StepOneViewController: UIViewController {
         navigationController?.navigationBar.isHidden = false
     }
     
-    func setupButtons() {
-        call911Button.layer.borderWidth = 2
-        call911Button.layer.borderColor = UIColor.black.cgColor
+    func setupUI() {
+        call911Button.layer.borderWidth = 1
+        call911Button.layer.borderColor = UIColor.lightGray.cgColor
         call911Button.layer.masksToBounds = true
         call911Button.layer.cornerRadius = 5
+        
+        instructionsTextView.layer.borderWidth = 1
+        instructionsTextView.layer.borderColor = UIColor.lightGray.cgColor
+        instructionsTextView.layer.cornerRadius = 10
+        instructionsTextView.layer.masksToBounds = true
     }
     
+    @IBOutlet weak var instructionsTextView: UITextView!
     @IBOutlet weak var call911Button: UIButton!
     @IBAction func call911ButtonTapped(_ sender: Any) {
         

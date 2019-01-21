@@ -76,7 +76,7 @@ class ProfileTableViewController: UITableViewController, UITextFieldDelegate {
             ProfileController.shared.createProfileWith(name: name, address: address, email: email, phone: phone, insurance: insurance, policyNumber: policyNumber)
         }
         
-        let notificationController = UIAlertController(title: "Saved", message: "Your information have been successfully saved.", preferredStyle: .alert)
+        let notificationController = UIAlertController(title: "Saved", message: "Your information has been successfully saved.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         
         notificationController.addAction(okAction)

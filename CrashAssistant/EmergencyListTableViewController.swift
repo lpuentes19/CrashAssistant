@@ -129,7 +129,7 @@ class EmergencyListTableViewController: UITableViewController, CNContactPickerDe
         alertController.addAction(addExistingContact)
         alertController.addAction(cancelAction)
         
-        // If I ever decide to release this app for the iPad, this ensures the Alert Controllers are presented
+        // This ensures the Alert Controllers are presented for iPads
         if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
             alertController.popoverPresentationController?.barButtonItem = self.addEmergencyContactButton
             alertController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up

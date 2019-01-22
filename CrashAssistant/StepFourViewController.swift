@@ -65,6 +65,11 @@ class StepFourViewController: UIViewController, UIImagePickerControllerDelegate,
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
         }))
         
+        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
+            actionSheet.popoverPresentationController?.sourceView = self.view
+            actionSheet.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
+        }
+        
         self.present(actionSheet, animated: true, completion: nil)
     }
     // Saving image to photo library and also setting the picture as the image

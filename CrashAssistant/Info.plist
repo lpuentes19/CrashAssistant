@@ -19,17 +19,17 @@
 	<key>CFBundleShortVersionString</key>
 	<string>2.0</string>
 	<key>CFBundleVersion</key>
-	<string>4</string>
+	<string>5</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>This feature requires access to the camera.</string>
+	<string>This feature requires access to the camera so you can take photos.</string>
 	<key>NSContactsUsageDescription</key>
-	<string>This feature requires access to your Contact List.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This feature requires access to the Photo Library.</string>
+	<string>This feature requires access to your Contact List so you can store contacts within this app.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>This feature requires access to storing your photo in the Photo Library.</string>
+	<string>This feature gives us permission to store photos in your Photo Library.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This feature requires access to the Photo Library if you want to select a photo rather than take one.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

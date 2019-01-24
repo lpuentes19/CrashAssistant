@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>2.0</string>
 	<key>CFBundleVersion</key>
-	<string>6</string>
+	<string>7</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
@@ -27,7 +27,7 @@
 	<key>NSContactsUsageDescription</key>
 	<string>This feature requires access to your Contact List so that you can store existing contacts on your phone within this app so that you can make calls to your emergency contact(s).</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>In order to store photos you&apos;ve taken related to your accident within the app, please grant us permission to save it to your Photo Library.</string>
+	<string>In order to store photos you've taken related to your accident within the app, please grant us permission to save it to your Photo Library.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>If you would like to select a photo from your Photo Library to use as a photo for your accident, please give us permission to access your Photo Library.</string>
 	<key>UILaunchStoryboardName</key>
